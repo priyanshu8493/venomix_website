@@ -55,7 +55,7 @@ export function Hero() {
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-white opacity-70" />
             <span className="relative inline-flex h-2 w-2 rounded-full bg-white" />
           </span>
-          Third edition · Sept 11–12, 2026 · Kolkata
+          First edition · Sept 11–12, 2026 · Kolkata
         </motion.div>
 
         <h1 className="mt-8 font-display text-[clamp(4rem,9vw,7.5rem)] leading-[1.06] font-extrabold tracking-[-0.02em] text-white">

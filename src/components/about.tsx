@@ -27,10 +27,10 @@ const features = [
 ];
 
 const milestones = [
-  { value: "03", label: "Editions strong" },
+  { value: "01", label: "The first edition" },
   { value: "12+", label: "Partner companies" },
-  { value: "2100+", label: "Alumni builders" },
-  { value: "96%", label: "Would return" },
+  { value: "40+", label: "Mentors & judges" },
+  { value: "500+", label: "Seats on the line" },
 ];
 
 export function About() {

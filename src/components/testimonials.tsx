@@ -7,40 +7,40 @@ import { Reveal } from "@/components/reveal";
 import { SectionHeading } from "@/components/section-heading";
 
 const metrics = [
-  { end: 3200, suffix: "+", label: "Applications received" },
-  { end: 500, suffix: "+", label: "Hackers on-site" },
-  { end: 12, prefix: "₹", suffix: "L+", label: "Prizes awarded" },
-  { end: 96, suffix: "%", label: "Would return" },
+  { end: 500, suffix: "", label: "Seats on the line" },
+  { end: 12, prefix: "₹", suffix: "L+", label: "Prize pool on the table" },
+  { end: 40, suffix: "+", label: "Mentors & judges" },
+  { end: 6, suffix: "", label: "Tracks, one sprint" },
 ];
 
 const testimonials = [
   {
     quote:
-      "We came in as four strangers from different colleges and left as a team with a funded prototype. The hourly mentor sprints changed how we think about shipping.",
-    name: "Ishita Kulkarni",
-    role: "Team Sisyphus · Winners, AI Track '25",
-    initials: "IK",
+      "The team behind Venomix has run the sharpest student build-events in eastern India for years. If anyone can make a 12-hour sprint feel effortless, it's them.",
+    name: "Ritika Banerjee",
+    role: "Organizer · DevCircle Kolkata",
+    initials: "RB",
     gradient: "linear-gradient(135deg,#FFB3C7,#E85A4F)",
   },
   {
     quote:
-      "Venomix is the only hackathon where I've seen judges argue over a rubric in public. You know exactly why you won or lost — that's rare and it made us better.",
-    name: "Devansh Gupta",
-    role: "Team Kernel Panic · Finalist '25",
-    initials: "DG",
+      "A 12-hour format forces the one skill most hackathons never teach: ruthless scoping. That's exactly why I said yes when they asked me to judge.",
+    name: "Ananya Rao",
+    role: "Staff ML Engineer, DeepGrid · Venomix Judge",
+    initials: "AR",
     gradient: "linear-gradient(135deg,#FF8C42,#E85A4F)",
   },
   {
     quote:
-      "I joined solo, terrified, with a half-baked idea. I left with a team, two job interviews, and a working product demo — built in 12 hours flat. Best weekend of my degree.",
-    name: "Fatima Sheikh",
-    role: "Solo hacker · Open Innovation '25",
-    initials: "FS",
+      "Kolkata's builder scene has been waiting for a flagship event of its own. First edition or not — the mentor bench and track design set the bar seriously high.",
+    name: "Sourav Dutta",
+    role: "Founder · CampusDAO",
+    initials: "SD",
     gradient: "linear-gradient(135deg,#C4B0E4,#FF8C42)",
   },
   {
     quote:
-      "The production quality rivals any conference I've attended. As a sponsor, we hired three interns out of that weekend. The ROI was embarrassingly good.",
+      "We signed on as a partner before a single demo existed. The track lineup, the judging rubric, the hiring lounge plan — this is designed like an event that's been running for years.",
     name: "Nikhil Verma",
     role: "Developer Relations · Anchor Partner",
     initials: "NV",
@@ -102,10 +102,10 @@ export function Testimonials() {
 
         <div className="mt-24">
           <SectionHeading
-            eyebrow="Success Stories"
+            eyebrow="Community Voices"
             title={
               <>
-                Proof, not promises. <span className="text-gradient">In their words.</span>
+                First edition energy. <span className="text-gradient">Already loud.</span>
               </>
             }
           />

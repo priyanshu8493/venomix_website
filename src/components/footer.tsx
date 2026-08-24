@@ -102,8 +102,11 @@ export function Footer() {
               </a>
             </li>
             <li>
-              <a href="#stories" className="transition-colors duration-200 hover:text-accent-strong">
-                Past editions
+              <a
+                href="mailto:hello@venomix.dev?subject=Press%20%26%20Media"
+                className="transition-colors duration-200 hover:text-accent-strong"
+              >
+                Press & media
               </a>
             </li>
             <li>

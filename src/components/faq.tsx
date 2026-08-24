@@ -33,7 +33,7 @@ const faqs: Faq[] = [
     category: "Registration",
     question: "How do I register, and when do applications close?",
     answer:
-      "Use the registration form on this page. Applications are reviewed on a rolling basis and close September 5 or when we hit capacity — whichever comes first. Last year we were full three weeks early.",
+      "Use the registration form on this page. Applications are reviewed on a rolling basis and close September 5 or when we hit capacity — whichever comes first. Seats are capped at 500, so early is the only safe bet.",
   },
   {
     category: "Registration",
@@ -87,7 +87,7 @@ const faqs: Faq[] = [
     category: "Post-Hackathon",
     question: "What happens to projects after the event?",
     answer:
-      "Winning teams get introductions to partner accelerators and investors, fast-track interviews with hiring partners, and continued Discord access. Several past projects went on to raise pre-seed rounds.",
+      "Winning teams get introductions to partner accelerators and investors, fast-track interviews with hiring partners, and continued Discord access. Venomix is built to be a launchpad, not a one-off — this first edition is where the alumni network starts.",
   },
   {
     category: "Event Day",
