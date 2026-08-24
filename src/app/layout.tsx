@@ -27,11 +27,12 @@ export const metadata: Metadata = {
     template: "%s · Venomix",
   },
   description:
-    "Venomix is India's premier 36-hour hackathon. 500 builders, ₹12L+ in prizes, world-class mentors, and six innovation tracks. November 21–22, 2026 · Bengaluru.",
+    "Venomix is India's premier 12-hour speed hackathon. 500 builders, ₹12L+ in prizes, world-class mentors, and six innovation tracks. September 11–12, 2026 · Kolkata.",
   keywords: [
     "hackathon",
     "Venomix",
-    "Bengaluru hackathon",
+    "Kolkata hackathon",
+    "speed hackathon",
     "AI hackathon",
     "Web3",
     "FinTech",
@@ -49,13 +50,13 @@ export const metadata: Metadata = {
     siteName: "Venomix",
     title: "Venomix 2026 — Build. Innovate. Elevate.",
     description:
-      "India's premier 36-hour hackathon. 500 builders. ₹12L+ prizes. Six tracks. One relentless standard. Nov 21–22, Bengaluru.",
+      "India's premier 12-hour speed hackathon. 500 builders. ₹12L+ prizes. Six tracks. One relentless standard. Sept 11–12, Kolkata.",
   },
   twitter: {
     card: "summary_large_image",
     title: "Venomix 2026 — Build. Innovate. Elevate.",
     description:
-      "India's premier 36-hour hackathon. 500 builders. ₹12L+ prizes. Six tracks. Nov 21–22, Bengaluru.",
+      "India's premier 12-hour speed hackathon. 500 builders. ₹12L+ prizes. Six tracks. Sept 11–12, Kolkata.",
   },
   robots: {
     index: true,

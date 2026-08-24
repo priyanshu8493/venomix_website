@@ -2,7 +2,7 @@
 
 import { useSyncExternalStore } from "react";
 
-const EVENT_DATE = new Date("2026-11-21T09:30:00+05:30").getTime();
+const EVENT_DATE = new Date("2026-09-11T18:00:00+05:30").getTime();
 
 function subscribe(callback: () => void) {
   const timer = setInterval(callback, 1000);

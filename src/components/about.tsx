@@ -12,7 +12,7 @@ const features = [
   {
     icon: Brain,
     title: "Learn from the best",
-    text: "40+ mentors and judges from frontier labs, unicorns and YC startups — on call around the clock.",
+    text: "40+ mentors and judges from frontier labs, unicorns and YC startups — cycling through the floor all sprint long.",
   },
   {
     icon: Rocket,
@@ -59,11 +59,11 @@ export function About() {
           </Reveal>
           <Reveal delay={0.28}>
             <p className="mt-4 leading-relaxed text-muted">
-              Over 36 hours you&apos;ll form a team around a problem worth solving, get pushed by
-              mentors who&apos;ve shipped at scale, and pitch to judges who decide with their
-              checkbooks. Whether it&apos;s your first hackathon or your fifteenth, you leave
-              with something real — a product, a network, and proof of what you can do under
-              pressure.
+              The format is deliberately intense: twelve hours, one team, one problem worth
+              solving. You&apos;ll scope ruthlessly, get pushed by mentors who&apos;ve shipped at
+              scale, and pitch to judges who decide with their checkbooks — all before midnight.
+              Whether it&apos;s your first hackathon or your fifteenth, you leave with something
+              real: a product, a network, and proof of what you can do under pressure.
             </p>
           </Reveal>
 

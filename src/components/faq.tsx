@@ -15,7 +15,7 @@ const faqs: Faq[] = [
     category: "General",
     question: "What exactly is Venomix?",
     answer:
-      "A 36-hour hackathon in Bengaluru where 500 builders team up to ship working products across six tracks — judged by engineers, founders and investors, with ₹12L+ in prizes.",
+      "A 12-hour speed hackathon in Kolkata where 500 builders team up to ship working products across six tracks — judged by engineers, founders and investors, with ₹12L+ in prizes. Kickoff night on Sept 11, one relentless build sprint on Sept 12.",
   },
   {
     category: "General",
@@ -27,13 +27,13 @@ const faqs: Faq[] = [
     category: "General",
     question: "Is there a participation fee?",
     answer:
-      "No. Venomix is completely free — meals, snacks, swag and workspace are covered by our partners. We only ask for your best effort for 36 hours.",
+      "No. Venomix is completely free — meals, snacks, swag and workspace are covered by our partners. We only ask for your best effort for 12 straight hours.",
   },
   {
     category: "Registration",
     question: "How do I register, and when do applications close?",
     answer:
-      "Use the registration form on this page. Applications are reviewed on a rolling basis and close October 15 or when we hit capacity — whichever comes first. Last year we were full three weeks early.",
+      "Use the registration form on this page. Applications are reviewed on a rolling basis and close September 5 or when we hit capacity — whichever comes first. Last year we were full three weeks early.",
   },
   {
     category: "Registration",
@@ -63,13 +63,13 @@ const faqs: Faq[] = [
     category: "Event Day",
     question: "What should I bring?",
     answer:
-      "Laptop, charger, any hardware you plan to hack on, and a government ID for check-in. We provide food, caffeine, WiFi, sleeping pods, showers and enough stickers to redecorate your laptop twice.",
+      "Laptop, charger, any hardware you plan to hack on, and a government ID for check-in. We provide food, endless caffeine, WiFi and enough stickers to redecorate your laptop twice.",
   },
   {
     category: "Event Day",
     question: "Can I start building before the event?",
     answer:
-      "No — all code, designs and pitch material must be created during the 36 hours. Open-source libraries, APIs and public datasets are fair game. Teams declare their starting point at kickoff.",
+      "No — all code, designs and pitch material must be created during the 12 hours. Open-source libraries, APIs and public datasets are fair game. Teams declare their starting point at kickoff.",
   },
   {
     category: "Prizes",
@@ -90,12 +90,17 @@ const faqs: Faq[] = [
       "Winning teams get introductions to partner accelerators and investors, fast-track interviews with hiring partners, and continued Discord access. Several past projects went on to raise pre-seed rounds.",
   },
   {
+    category: "Event Day",
+    question: "Is 12 hours really enough to build something?",
+    answer:
+      "That's the point. The sprint format forces ruthless scoping: real problem, thin slice, working demo. Mentors help you cut scope every hour, and the rubric rewards a polished small thing over a broken big one.",
+  },
+  {
     category: "Post-Hackathon",
     question: "Will sessions be recorded?",
     answer:
-      "Keynotes and finalist pitches are recorded and published on our YouTube channel within two weeks. Workshops are mentor-dependent; most opt in to recording.",
-  },
-];
+      "Keynotes and finalist pitches are recorded and published on our YouTube channel within two days. Workshops are mentor-dependent; most opt in to recording.",
+  },];
 
 export function Faq() {
   const [query, setQuery] = useState("");

@@ -23,8 +23,8 @@ export function CtaBand() {
         </Reveal>
         <Reveal delay={0.1}>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed font-medium text-white/90">
-            500 seats. Six tracks. One weekend that changes how you think about your own
-            ceiling. The only wrong move is sitting this one out.
+            500 seats. Six tracks. Twelve hours on the clock — one weekend that changes how you
+            think about your own ceiling. The only wrong move is sitting this one out.
           </p>
         </Reveal>
         <Reveal delay={0.18}>

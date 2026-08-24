@@ -8,16 +8,16 @@ import { SectionHeading } from "@/components/section-heading";
 import { GeoTriangle, PixelSparkle } from "@/components/pixel-art";
 
 const perks = [
-  "Free entry — meals, swag and sleeping pods included",
+  "Free entry — meals, swag and endless caffeine included",
   "₹12L+ track prizes plus ₹50,000 cloud credits per winning team",
-  "40+ mentors on call around the clock",
+  "40+ mentors cycling through the floor all sprint long",
   "Fast-track interviews with hiring partners",
 ];
 
 const meta = [
-  { icon: CalendarDays, text: "November 21–22, 2026" },
-  { icon: MapPin, text: "KTPO Convention Centre, Bengaluru" },
-  { icon: Timer, text: "36 hours of hacking" },
+  { icon: CalendarDays, text: "September 11–12, 2026" },
+  { icon: MapPin, text: "Biswa Bangla Convention Centre, Kolkata" },
+  { icon: Timer, text: "12 hours, one non-stop sprint" },
   { icon: Zap, text: "Limited to 500 seats" },
 ];
 

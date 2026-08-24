@@ -10,7 +10,7 @@ const stats = [
   { value: "500+", label: "Hackers on-site" },
   { value: "₹12L+", label: "Prize pool" },
   { value: "40+", label: "Mentors & judges" },
-  { value: "36hrs", label: "Of relentless building" },
+  { value: "12hrs", label: "One non-stop sprint" },
 ];
 
 const headline = ["Build boldly.", "Ship fearlessly.", "Rise together."];
@@ -55,7 +55,7 @@ export function Hero() {
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-white opacity-70" />
             <span className="relative inline-flex h-2 w-2 rounded-full bg-white" />
           </span>
-          Third edition · Nov 21–22, 2026 · Bengaluru
+          Third edition · Sept 11–12, 2026 · Kolkata
         </motion.div>
 
         <h1 className="mt-8 font-display text-[clamp(4rem,9vw,7.5rem)] leading-[1.06] font-extrabold tracking-[-0.02em] text-white">
@@ -83,8 +83,8 @@ export function Hero() {
           className="mt-7 max-w-2xl text-lg leading-relaxed font-medium text-white/90 md:text-2xl md:leading-relaxed"
         >
           Venomix is where 500 of India&apos;s sharpest builders, designers and dreamers collide
-          for 36 hours — with world-class mentors, serious prizes, and zero tolerance for
-          thinking small.
+          for a single 12-hour sprint — world-class mentors, serious prizes, and zero tolerance
+          for thinking small. Speed is the whole point.
         </motion.p>
 
         <motion.div
@@ -113,7 +113,7 @@ export function Hero() {
           className="mt-14"
         >
           <p className="mb-4 text-[11px] font-bold uppercase tracking-[0.3em] text-white/80">
-            Hacking begins in
+            Kickoff in
           </p>
           <Countdown />
         </motion.div>
@@ -125,10 +125,10 @@ export function Hero() {
           className="mt-11 flex flex-wrap items-center justify-center gap-x-7 gap-y-3 text-sm font-medium text-white/85"
         >
           <span className="inline-flex items-center gap-2">
-            <MapPin className="h-4 w-4" /> KTPO Convention Centre, Whitefield
+            <MapPin className="h-4 w-4" /> Biswa Bangla Convention Centre, New Town
           </span>
           <span className="inline-flex items-center gap-2">
-            <CalendarDays className="h-4 w-4" /> November 21–22
+            <CalendarDays className="h-4 w-4" /> September 11–12
           </span>
           <span className="inline-flex items-center gap-2">
             <Users className="h-4 w-4" /> Limited to 500 seats

@@ -16,7 +16,7 @@ const metrics = [
 const testimonials = [
   {
     quote:
-      "We came in as four strangers from different colleges and left as a team with a funded prototype. The mentor rounds at 2 AM changed how we think about shipping.",
+      "We came in as four strangers from different colleges and left as a team with a funded prototype. The hourly mentor sprints changed how we think about shipping.",
     name: "Ishita Kulkarni",
     role: "Team Sisyphus · Winners, AI Track '25",
     initials: "IK",
@@ -32,7 +32,7 @@ const testimonials = [
   },
   {
     quote:
-      "I joined solo, terrified, with a half-baked idea. I left with a team, two job interviews, and a working product demo. Best 36 hours of my degree.",
+      "I joined solo, terrified, with a half-baked idea. I left with a team, two job interviews, and a working product demo — built in 12 hours flat. Best weekend of my degree.",
     name: "Fatima Sheikh",
     role: "Solo hacker · Open Innovation '25",
     initials: "FS",

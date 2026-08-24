@@ -81,7 +81,7 @@ export default function OpengraphImage() {
             marginBottom: 20,
           }}
         >
-          NOV 21–22, 2026 · BENGALURU
+          SEPT 11–12, 2026 · KOLKATA
         </div>
         <div
           style={{

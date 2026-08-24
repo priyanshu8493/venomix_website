@@ -8,10 +8,10 @@ import { SectionHeading } from "@/components/section-heading";
 
 const milestones = [
   { date: "Aug 25", title: "Registrations open" },
-  { date: "Oct 15", title: "Team registrations close" },
-  { date: "Nov 18", title: "Finalist reveal & briefing" },
-  { date: "Nov 21–22", title: "36-hour hackathon" },
-  { date: "Nov 23", title: "Winners announced" },
+  { date: "Sept 5", title: "Team registrations close" },
+  { date: "Sept 9", title: "Finalist briefing" },
+  { date: "Sept 11–12", title: "12-hour sprint in Kolkata" },
+  { date: "Sept 12", title: "Winners crowned same night" },
 ];
 
 type Session = {
@@ -25,7 +25,7 @@ const days: { id: string; label: string; date: string; sessions: Session[] }[] =
   {
     id: "pre",
     label: "Pre-Event",
-    date: "Nov 14 · Online",
+    date: "Sept 8 · Online",
     sessions: [
       {
         time: "18:00",
@@ -39,119 +39,114 @@ const days: { id: string; label: string; date: string; sessions: Session[] }[] =
         title: "Team formation mixer",
         kind: "Community",
         detail:
-          "Speed-matching on Discord for solo hackers looking to build their dream squad before the event.",
+          "Speed-matching on Discord for solo hackers looking to build their dream squad before event day.",
       },
       {
         time: "20:30",
         title: "Rules & judging rubric briefing",
         kind: "Essential",
         detail:
-          "How submissions are scored, what judges look for, and how to avoid the mistakes teams make every year.",
+          "How submissions are scored, what judges look for, and how to pace a 12-hour sprint without burning out.",
       },
     ],
   },
   {
     id: "day1",
-    label: "Day 01",
-    date: "Nov 21 · On-site",
+    label: "Kickoff Night",
+    date: "Sept 11 · Fri evening",
     sessions: [
       {
-        time: "09:00",
-        title: "Check-in, badges & breakfast",
+        time: "17:00",
+        title: "Check-in, badges & coffee",
         kind: "Logistics",
-        detail: "Collect your kit, grab coffee, find your squad's table. Doors open sharp.",
+        detail: "Collect your kit, meet the volunteers, find your squad's table. Doors open sharp.",
       },
       {
-        time: "10:00",
+        time: "18:00",
         title: "Opening ceremony & keynote",
         kind: "Ceremony",
         detail: "Official launch, partner addresses, and a keynote on building through uncertainty.",
       },
       {
-        time: "11:00",
-        title: "Hacking begins",
-        kind: "Build",
-        detail: "The clock starts. 26 hours on this clock. Choose your problem wisely.",
+        time: "19:00",
+        title: "Problem reveal & team formation",
+        kind: "Essential",
+        detail:
+          "Track problem statements go live. Solo hackers get an on-site speed-matching round.",
       },
       {
-        time: "15:00",
-        title: "Workshop: Shipping AI agents that don't embarrass you",
+        time: "20:00",
+        title: "Workshop: Ship fast without breaking everything",
         kind: "Workshop",
-        detail: "Hands-on session on evals, guardrails and latency budgets with Ananya Rao (DeepGrid).",
+        detail:
+          "Scoping, stubbing and demo-first architecture — how to have something working by hour three.",
       },
       {
         time: "21:00",
-        title: "Midnight mentor rounds",
+        title: "Mentor floor opens",
         kind: "Mentorship",
-        detail: "Book 15-minute slots with mentors from NovaCloud, Quantek and Hexon.",
+        detail: "Validate your idea with mentors from NovaCloud, Quantek and Hexon before you write a line of code.",
       },
     ],
   },
   {
     id: "day2",
-    label: "Day 02",
-    date: "Nov 22 · On-site",
+    label: "Sprint Day",
+    date: "Sept 12 · Sat · 12 hours",
     sessions: [
       {
         time: "08:00",
-        title: "Sunrise standup & breakfast",
+        title: "Doors open & breakfast",
         kind: "Ritual",
-        detail: "Quick round-the-table status check. Coffee is not optional.",
+        detail: "Fuel up, plug in, sync with your team. Coffee is not optional.",
       },
       {
-        time: "10:00",
-        title: "Workshop: From prototype to pitch",
+        time: "09:00",
+        title: "Hacking starts — clock is running",
+        kind: "Build",
+        detail: "Twelve hours on the clock. First commit within the first thirty minutes or it doesn't count.",
+      },
+      {
+        time: "12:00",
+        title: "Mentor speed-rounds",
+        kind: "Mentorship",
+        detail: "Ten-minute table-hops with mentors. Get unblocked fast, then get back to building.",
+      },
+      {
+        time: "15:00",
+        title: "Halfway checkpoint & snack drop",
+        kind: "Checkpoint",
+        detail: "Quick status pulse across the floor — plus sugar, fruit and caffeine reinforcements.",
+      },
+      {
+        time: "18:00",
+        title: "Final stretch: pitch clinic",
         kind: "Workshop",
-        detail: "Storytelling frameworks that make judges lean in — by Vikram Shah (NovaCloud).",
+        detail: "Drop-in coaching on demo flow and storytelling while there's still time to fix your narrative.",
       },
       {
-        time: "13:00",
+        time: "21:00",
         title: "Code freeze",
         kind: "Deadline",
         detail: "Repos lock. What's shipped is what's judged. Submit your repo and demo video.",
       },
       {
-        time: "14:00",
+        time: "21:30",
         title: "Demo expo & first-round judging",
         kind: "Judging",
-        detail: "Walk the floor, show your build, answer hard questions. Top teams advance.",
+        detail: "Walk the floor, show your build, answer hard questions. Top teams advance immediately.",
       },
       {
-        time: "17:30",
+        time: "22:45",
         title: "Finalist pitches on main stage",
         kind: "Finale",
-        detail: "Five minutes per team in front of the full judging panel and the entire event.",
-      },
-    ],
-  },
-  {
-    id: "finale",
-    label: "Finale",
-    date: "Nov 23 · Hybrid",
-    sessions: [
-      {
-        time: "11:00",
-        title: "Judging deliberation",
-        kind: "Behind the scenes",
-        detail: "Streamed live. Watch how winners are actually decided against the public rubric.",
+        detail: "Five minutes per team in front of the full judging panel.",
       },
       {
-        time: "12:30",
-        title: "Closing keynote",
-        kind: "Keynote",
-        detail: "Dr. Meera Krishnan on what the next decade of builders will be judged by.",
-      },
-      {
-        time: "13:30",
+        time: "23:30",
         title: "Awards ceremony",
         kind: "Ceremony",
-        detail: "₹12L+ across track prizes, special categories and the grand prize. Plus glory.",
-      },
-      {
-        time: "15:00",
-        title: "Afterparty & hiring lounge",
-        kind: "Networking",
-        detail: "Demos unwind into conversations. Hiring partners host on-site interviews.",
+        detail: "₹12L+ across track prizes, special categories and the grand prize — crowned the same night.",
       },
     ],
   },
@@ -170,10 +165,10 @@ export function Schedule() {
           eyebrow="Schedule"
           title={
             <>
-              Two days. <span className="text-gradient">Zero wasted minutes.</span>
+              One weekend. <span className="text-gradient">Twelve relentless hours.</span>
             </>
           }
-          description="From kickoff stream to awards stage, every hour is engineered. Expand any session for details."
+          description="A format engineered for momentum: kickoff night to form your squad and scope the idea, then a single 12-hour sprint from first commit to final pitch."
         />
 
         <Reveal delay={0.15}>
@@ -279,7 +274,7 @@ export function Schedule() {
 
         <Reveal delay={0.3}>
           <p className="mt-8 text-center text-sm font-medium text-muted">
-            Full agenda with speaker lineups drops two weeks before the event.
+            Full agenda with speaker lineups drops one week before the event.
           </p>
         </Reveal>
       </div>
