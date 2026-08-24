@@ -36,12 +36,12 @@ export function Countdown() {
         return (
           <div
             key={label}
-            className="min-w-[68px] rounded-2xl border border-border bg-surface/70 px-3 py-3 backdrop-blur sm:min-w-[84px] sm:px-5 sm:py-4"
+            className="min-w-[70px] rounded-xl border border-white/35 bg-white/15 px-3 py-3 backdrop-blur-sm sm:min-w-[88px] sm:px-5 sm:py-4"
           >
-            <div className="font-display text-2xl font-bold tabular-nums sm:text-4xl">
+            <div className="font-display text-2xl font-extrabold tabular-nums text-white sm:text-4xl">
               {value === null ? "--" : String(value).padStart(2, "0")}
             </div>
-            <div className="mt-1 text-[10px] font-semibold uppercase tracking-[0.22em] text-muted">
+            <div className="mt-1 text-[10px] font-bold uppercase tracking-[0.22em] text-white/75">
               {label}
             </div>
           </div>

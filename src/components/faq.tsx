@@ -115,8 +115,8 @@ export function Faq() {
   }, [query, category]);
 
   return (
-    <section id="faq" className="relative scroll-mt-20 bg-surface/40 py-24 md:py-32">
-      <div className="mx-auto max-w-4xl px-5 sm:px-8">
+    <section id="faq" className="scroll-mt-24 bg-cream py-28 md:py-40">
+      <div className="mx-auto max-w-[900px] px-5 sm:px-8">
         <SectionHeading
           eyebrow="FAQ"
           title={
@@ -129,14 +129,14 @@ export function Faq() {
 
         <Reveal delay={0.15}>
           <div className="relative mx-auto mt-12 max-w-xl">
-            <Search className="pointer-events-none absolute top-1/2 left-5 h-4.5 w-4.5 -translate-y-1/2 text-muted" />
+            <Search className="pointer-events-none absolute top-1/2 left-5 h-5 w-5 -translate-y-1/2 text-muted" />
             <input
               type="search"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Search questions…"
               aria-label="Search frequently asked questions"
-              className="w-full rounded-full border border-border bg-surface py-3.5 pr-5 pl-12 text-sm outline-none transition-colors placeholder:text-muted focus:border-accent"
+              className="w-full rounded-xl border border-border bg-white py-4 pr-5 pl-12 text-sm font-medium shadow-[0_10px_30px_-20px_rgba(26,26,26,0.3)] outline-none transition-colors duration-200 placeholder:text-muted focus:border-accent"
             />
           </div>
         </Reveal>
@@ -148,10 +148,10 @@ export function Faq() {
                 key={cat}
                 type="button"
                 onClick={() => setCategory(cat)}
-                className={`rounded-full border px-4 py-1.5 text-xs font-semibold transition-colors duration-300 ${
+                className={`rounded-full border-2 px-4 py-1.5 text-xs font-bold transition-colors duration-200 ${
                   category === cat
-                    ? "border-accent bg-accent-soft text-accent"
-                    : "border-border text-muted hover:border-accent/50 hover:text-foreground"
+                    ? "border-accent bg-accent text-white"
+                    : "border-border bg-white text-muted hover:border-accent/60 hover:text-accent-strong"
                 }`}
               >
                 {cat}
@@ -161,11 +161,14 @@ export function Faq() {
         </Reveal>
 
         <Reveal delay={0.25}>
-          <div className="mt-10 rounded-3xl border border-border bg-surface px-6 sm:px-8">
+          <div className="mt-10 rounded-3xl border border-transparent bg-white px-6 py-2 shadow-[0_24px_56px_-32px_rgba(232,90,79,0.4)] sm:px-8">
             {filtered.length === 0 ? (
-              <p className="py-12 text-center text-sm text-muted">
+              <p className="py-12 text-center text-sm font-medium text-muted">
                 No answers match “{query}”. Try another search or write to us at{" "}
-                <a href="mailto:hello@venomix.dev" className="text-accent underline underline-offset-4">
+                <a
+                  href="mailto:hello@venomix.dev"
+                  className="font-bold text-accent-strong underline underline-offset-4"
+                >
                   hello@venomix.dev
                 </a>
               </p>
@@ -180,17 +183,17 @@ export function Faq() {
                         type="button"
                         onClick={() => setOpenId(isOpen ? null : id)}
                         aria-expanded={isOpen}
-                        className="flex w-full items-center justify-between gap-4 py-5 text-left"
+                        className="group flex w-full items-center justify-between gap-4 py-5 text-left"
                       >
                         <span>
-                          <span className="mb-1 block text-[11px] font-semibold uppercase tracking-[0.18em] text-accent">
+                          <span className="mb-1 block text-[11px] font-bold uppercase tracking-[0.18em] text-accent-strong">
                             {faq.category}
                           </span>
-                          <span className="font-medium">{faq.question}</span>
+                          <span className="font-bold group-hover:text-accent-strong">{faq.question}</span>
                         </span>
                         <ChevronDown
-                          className={`h-4.5 w-4.5 shrink-0 text-muted transition-transform duration-300 ${
-                            isOpen ? "rotate-180 text-accent" : ""
+                          className={`h-5 w-5 shrink-0 text-muted transition-transform duration-300 ${
+                            isOpen ? "rotate-180 text-accent-strong" : ""
                           }`}
                         />
                       </button>
@@ -203,7 +206,9 @@ export function Faq() {
                             transition={{ duration: 0.3, ease: "easeInOut" }}
                             className="overflow-hidden"
                           >
-                            <p className="pb-6 pr-8 text-sm leading-relaxed text-muted">{faq.answer}</p>
+                            <p className="pb-6 pr-8 text-sm leading-relaxed font-medium text-muted">
+                              {faq.answer}
+                            </p>
                           </motion.div>
                         )}
                       </AnimatePresence>

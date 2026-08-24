@@ -5,6 +5,7 @@ import type { ChangeEvent, FormEvent } from "react";
 import { CalendarDays, CheckCircle2, MapPin, Timer, Zap } from "lucide-react";
 import { Reveal } from "@/components/reveal";
 import { SectionHeading } from "@/components/section-heading";
+import { GeoTriangle, PixelSparkle } from "@/components/pixel-art";
 
 const perks = [
   "Free entry — meals, swag and sleeping pods included",
@@ -47,7 +48,7 @@ const initialForm: FormState = {
 };
 
 const inputClass =
-  "w-full rounded-xl border border-border bg-surface-2 px-4 py-3 text-sm outline-none transition-colors placeholder:text-muted focus:border-accent";
+  "w-full rounded-xl border border-border bg-cream px-4 py-3 text-sm font-medium outline-none transition-colors duration-200 placeholder:text-muted focus:border-accent focus:bg-white";
 
 export function Register() {
   const [form, setForm] = useState<FormState>(initialForm);
@@ -85,12 +86,16 @@ export function Register() {
   }
 
   return (
-    <section id="register" className="relative scroll-mt-20 overflow-hidden py-24 md:py-32">
-      <div
+    <section id="register" className="relative scroll-mt-24 overflow-hidden py-28 md:py-40">
+      <PixelSparkle
         aria-hidden="true"
-        className="pointer-events-none absolute -right-32 top-16 h-[480px] w-[480px] rounded-full bg-[radial-gradient(circle_at_center,var(--accent),transparent_62%)] opacity-15 blur-3xl"
+        className="animate-float-slow pointer-events-none absolute top-24 right-[8%] hidden w-12 lg:block"
       />
-      <div className="mx-auto grid max-w-7xl items-start gap-14 px-5 sm:px-8 lg:grid-cols-[1fr_1.05fr]">
+      <GeoTriangle
+        aria-hidden="true"
+        className="pointer-events-none absolute bottom-24 left-[4%] hidden h-14 w-14 opacity-80 lg:block"
+      />
+      <div className="mx-auto grid max-w-[1200px] items-start gap-14 px-5 sm:px-8 lg:grid-cols-[1fr_1.05fr]">
         <div>
           <SectionHeading
             align="left"
@@ -106,8 +111,8 @@ export function Register() {
           />
           <ul className="mt-8 space-y-3.5">
             {perks.map((perk) => (
-              <li key={perk} className="flex items-start gap-3 text-sm leading-relaxed">
-                <CheckCircle2 className="mt-0.5 h-4.5 w-4.5 shrink-0 text-accent" />
+              <li key={perk} className="flex items-start gap-3 text-sm font-medium leading-relaxed">
+                <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-accent" />
                 {perk}
               </li>
             ))}
@@ -116,9 +121,9 @@ export function Register() {
             {meta.map((item) => (
               <div
                 key={item.text}
-                className="flex items-center gap-3 rounded-xl border border-border bg-surface px-4 py-3 text-sm text-muted"
+                className="flex items-center gap-3 rounded-xl border border-border bg-white px-4 py-3 text-sm font-semibold text-muted"
               >
-                <item.icon className="h-4.5 w-4.5 shrink-0 text-accent" />
+                <item.icon className="h-5 w-5 shrink-0 text-accent-strong" />
                 {item.text}
               </div>
             ))}
@@ -126,18 +131,18 @@ export function Register() {
         </div>
 
         <Reveal delay={0.15}>
-          <div className="premium-border rounded-3xl border border-border bg-surface p-6 md:p-8">
+          <div className="rounded-3xl border border-transparent bg-white p-6 shadow-[0_32px_72px_-40px_rgba(232,90,79,0.55)] md:p-8">
             {submitted ? (
               <div className="flex min-h-[420px] flex-col items-center justify-center text-center">
-                <span className="inline-flex h-16 w-16 items-center justify-center rounded-full bg-accent-soft text-accent">
+                <span className="inline-flex h-16 w-16 items-center justify-center rounded-full bg-accent-soft text-accent-strong">
                   <CheckCircle2 className="h-8 w-8" />
                 </span>
-                <h3 className="mt-6 font-display text-2xl font-bold tracking-tight">
+                <h3 className="mt-6 font-display text-2xl font-extrabold tracking-tight">
                   You&apos;re on the list, {form.name.split(" ")[0]}.
                 </h3>
-                <p className="mt-3 max-w-sm text-sm leading-relaxed text-muted">
+                <p className="mt-3 max-w-sm text-sm leading-relaxed font-medium text-muted">
                   A confirmation is on its way to{" "}
-                  <span className="font-medium text-foreground">{form.email}</span>. Watch your
+                  <span className="font-bold text-foreground">{form.email}</span>. Watch your
                   inbox for the Discord invite and team formation details.
                 </p>
                 <button
@@ -146,18 +151,20 @@ export function Register() {
                     setForm(initialForm);
                     setSubmitted(false);
                   }}
-                  className="mt-8 rounded-full border border-border px-6 py-3 text-sm font-semibold transition-colors hover:border-accent hover:text-accent"
+                  className="mt-8 rounded-xl border-2 border-border px-6 py-3 text-sm font-bold transition-colors duration-200 hover:border-accent hover:text-accent-strong"
                 >
                   Register another teammate
                 </button>
               </div>
             ) : (
               <form onSubmit={onSubmit} noValidate className="space-y-5">
-                <h3 className="font-display text-xl font-bold tracking-tight">Register for Venomix &apos;26</h3>
+                <h3 className="font-display text-xl font-extrabold tracking-tight">
+                  Register for Venomix &apos;26
+                </h3>
 
                 <div className="grid gap-5 sm:grid-cols-2">
                   <label className="block">
-                    <span className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-muted">
+                    <span className="mb-1.5 block text-xs font-bold uppercase tracking-wider text-muted">
                       Full name *
                     </span>
                     <input
@@ -167,10 +174,10 @@ export function Register() {
                       placeholder="Ada Lovelace"
                       className={inputClass}
                     />
-                    {errors.name && <p className="mt-1.5 text-xs text-red-400">{errors.name}</p>}
+                    {errors.name && <p className="mt-1.5 text-xs font-semibold text-berry">{errors.name}</p>}
                   </label>
                   <label className="block">
-                    <span className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-muted">
+                    <span className="mb-1.5 block text-xs font-bold uppercase tracking-wider text-muted">
                       Email *
                     </span>
                     <input
@@ -180,12 +187,12 @@ export function Register() {
                       placeholder="ada@builds.dev"
                       className={inputClass}
                     />
-                    {errors.email && <p className="mt-1.5 text-xs text-red-400">{errors.email}</p>}
+                    {errors.email && <p className="mt-1.5 text-xs font-semibold text-berry">{errors.email}</p>}
                   </label>
                 </div>
 
                 <label className="block">
-                  <span className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-muted">
+                  <span className="mb-1.5 block text-xs font-bold uppercase tracking-wider text-muted">
                     Phone (optional)
                   </span>
                   <input
@@ -195,12 +202,12 @@ export function Register() {
                     placeholder="+91 98765 43210"
                     className={inputClass}
                   />
-                  {errors.phone && <p className="mt-1.5 text-xs text-red-400">{errors.phone}</p>}
+                  {errors.phone && <p className="mt-1.5 text-xs font-semibold text-berry">{errors.phone}</p>}
                 </label>
 
                 <div className="grid gap-5 sm:grid-cols-2">
                   <label className="block">
-                    <span className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-muted">
+                    <span className="mb-1.5 block text-xs font-bold uppercase tracking-wider text-muted">
                       Primary role *
                     </span>
                     <select
@@ -217,10 +224,10 @@ export function Register() {
                         </option>
                       ))}
                     </select>
-                    {errors.role && <p className="mt-1.5 text-xs text-red-400">{errors.role}</p>}
+                    {errors.role && <p className="mt-1.5 text-xs font-semibold text-berry">{errors.role}</p>}
                   </label>
                   <label className="block">
-                    <span className="mb-1.5 block text-xs font-semibold uppercase tracking-wider text-muted">
+                    <span className="mb-1.5 block text-xs font-bold uppercase tracking-wider text-muted">
                       Experience *
                     </span>
                     <select
@@ -240,14 +247,14 @@ export function Register() {
                       ))}
                     </select>
                     {errors.experienceLevel && (
-                      <p className="mt-1.5 text-xs text-red-400">{errors.experienceLevel}</p>
+                      <p className="mt-1.5 text-xs font-semibold text-berry">{errors.experienceLevel}</p>
                     )}
                   </label>
                 </div>
 
                 <fieldset>
-                  <legend className="mb-2 block text-xs font-semibold uppercase tracking-wider text-muted">
-                    Track interest * <span className="normal-case">(you can switch on-site)</span>
+                  <legend className="mb-2 block text-xs font-bold uppercase tracking-wider text-muted">
+                    Track interest * <span className="font-medium normal-case">(you can switch on-site)</span>
                   </legend>
                   <select
                     value={form.track}
@@ -271,11 +278,11 @@ export function Register() {
                       </option>
                     ))}
                   </select>
-                  {errors.track && <p className="mt-1.5 text-xs text-red-400">{errors.track}</p>}
+                  {errors.track && <p className="mt-1.5 text-xs font-semibold text-berry">{errors.track}</p>}
                 </fieldset>
 
                 <fieldset>
-                  <legend className="mb-2.5 block text-xs font-semibold uppercase tracking-wider text-muted">
+                  <legend className="mb-2.5 block text-xs font-bold uppercase tracking-wider text-muted">
                     Team status *
                   </legend>
                   <div className="flex flex-wrap gap-2">
@@ -285,38 +292,34 @@ export function Register() {
                         type="button"
                         onClick={() => update("team", status)}
                         aria-pressed={form.team === status}
-                        className={`rounded-full border px-4 py-2 text-xs font-semibold transition-colors duration-300 ${
+                        className={`rounded-full border-2 px-4 py-2 text-xs font-bold transition-colors duration-200 ${
                           form.team === status
-                            ? "border-accent bg-accent-soft text-accent"
-                            : "border-border text-muted hover:border-accent/50 hover:text-foreground"
+                            ? "border-accent bg-accent text-white"
+                            : "border-border text-muted hover:border-accent/60 hover:text-accent-strong"
                         }`}
                       >
                         {status}
                       </button>
                     ))}
                   </div>
-                  {errors.team && <p className="mt-1.5 text-xs text-red-400">{errors.team}</p>}
+                  {errors.team && <p className="mt-1.5 text-xs font-semibold text-berry">{errors.team}</p>}
                 </fieldset>
 
-                <label className="flex items-start gap-3 text-xs leading-relaxed text-muted">
+                <label className="flex items-start gap-3 text-xs leading-relaxed font-medium text-muted">
                   <input
                     type="checkbox"
                     checked={form.agree}
                     onChange={(e: ChangeEvent<HTMLInputElement>) => update("agree", e.target.checked)}
-                    className="mt-0.5 h-4 w-4 shrink-0 accent-[var(--accent)]"
+                    className="accent-accent mt-0.5 h-4 w-4 shrink-0"
                   />
                   <span>
                     I agree to the Venomix code of conduct — be excellent to each other, build
                     original work, and respect the venue, volunteers and fellow hackers.
                   </span>
                 </label>
-                {errors.agree && <p className="-mt-3 text-xs text-red-400">{errors.agree}</p>}
+                {errors.agree && <p className="-mt-3 text-xs font-semibold text-berry">{errors.agree}</p>}
 
-                <button
-                  type="submit"
-                  disabled={submitting}
-                  className="flex w-full items-center justify-center gap-3 rounded-xl bg-gradient-brand py-4 font-semibold text-white shadow-[0_12px_44px_-10px_rgba(139,92,246,0.8)] transition-all duration-300 hover:brightness-110 disabled:opacity-70"
-                >
+                <button type="submit" disabled={submitting} className="btn-primary w-full disabled:opacity-70">
                   {submitting && (
                     <span className="h-4 w-4 animate-spin rounded-full border-2 border-white/40 border-t-white" />
                   )}

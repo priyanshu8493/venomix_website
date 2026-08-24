@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRight, Menu, X } from "lucide-react";
 import { Logo } from "@/components/logo";
-import { ThemeToggle } from "@/components/theme-toggle";
 
 const links = [
   { label: "About", href: "#about" },
@@ -37,15 +36,13 @@ export function Navbar() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
-        solid
-          ? "border-b border-border bg-background/80 backdrop-blur-xl"
-          : "border-b border-transparent bg-transparent"
+      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
+        solid ? "bg-accent shadow-[0_10px_36px_-16px_rgba(230,109,78,0.7)]" : "bg-transparent"
       }`}
     >
-      <nav className="mx-auto flex h-18 max-w-7xl items-center justify-between px-5 sm:px-8">
+      <nav className="mx-auto flex h-20 max-w-[1200px] items-center justify-between px-5 sm:px-8">
         <a href="#top" aria-label="Venomix home" onClick={() => setOpen(false)}>
-          <Logo />
+          <Logo variant="light" />
         </a>
 
         <ul className="hidden items-center gap-8 lg:flex">
@@ -53,7 +50,7 @@ export function Navbar() {
             <li key={link.href}>
               <a
                 href={link.href}
-                className="text-sm font-medium text-muted transition-colors duration-300 hover:text-foreground"
+                className="text-sm font-semibold text-white/85 transition-colors duration-200 hover:text-white"
               >
                 {link.label}
               </a>
@@ -62,20 +59,19 @@ export function Navbar() {
         </ul>
 
         <div className="flex items-center gap-3">
-          <ThemeToggle />
           <a
             href="#register"
-            className="group hidden items-center gap-2 rounded-full bg-gradient-brand px-5 py-2.5 text-sm font-semibold text-white shadow-[0_8px_30px_-8px_rgba(139,92,246,0.7)] transition-transform duration-300 hover:scale-[1.04] sm:inline-flex"
+            className="hidden items-center gap-2 rounded-xl bg-white px-6 py-3 text-sm font-bold text-accent-strong shadow-lg shadow-berry/30 transition-all duration-300 hover:-translate-y-0.5 sm:inline-flex"
           >
             Register
-            <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />
+            <ArrowRight className="h-4 w-4" />
           </a>
           <button
             type="button"
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
             onClick={() => setOpen((v) => !v)}
-            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border bg-surface text-foreground lg:hidden"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-white/35 text-white transition-colors duration-200 hover:bg-white/15 lg:hidden"
           >
             {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
@@ -88,31 +84,31 @@ export function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.35, ease: [0.32, 0.72, 0, 1] }}
-            className="overflow-hidden border-b border-border bg-background/95 backdrop-blur-xl lg:hidden"
+            transition={{ duration: 0.3, ease: [0.32, 0.72, 0, 1] }}
+            className="overflow-hidden bg-accent lg:hidden"
           >
-            <ul className="space-y-1 px-5 py-6">
+            <ul className="space-y-1 px-5 pb-7 pt-2">
               {links.map((link, i) => (
                 <motion.li
                   key={link.href}
                   initial={{ opacity: 0, x: -14 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.05 * i, duration: 0.3 }}
+                  transition={{ delay: 0.04 * i, duration: 0.25 }}
                 >
                   <a
                     href={link.href}
                     onClick={() => setOpen(false)}
-                    className="block py-2.5 font-display text-2xl font-semibold tracking-tight text-foreground/90 transition-colors hover:text-accent"
+                    className="block py-2.5 font-display text-2xl font-bold tracking-tight text-white/95 transition-colors hover:text-white"
                   >
                     {link.label}
                   </a>
                 </motion.li>
               ))}
-              <li className="pt-5">
+              <li className="pt-4">
                 <a
                   href="#register"
                   onClick={() => setOpen(false)}
-                  className="flex w-full items-center justify-center gap-2 rounded-full bg-gradient-brand px-6 py-3.5 font-semibold text-white"
+                  className="flex w-full items-center justify-center gap-2 rounded-xl bg-white px-6 py-4 font-bold text-accent-strong"
                 >
                   Register now
                   <ArrowRight className="h-4 w-4" />

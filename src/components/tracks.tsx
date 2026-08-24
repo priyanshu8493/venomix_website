@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 import { Reveal } from "@/components/reveal";
 import { SectionHeading } from "@/components/section-heading";
+import { PixelBolt } from "@/components/pixel-art";
 
 const tracks = [
   {
@@ -63,12 +64,8 @@ const tracks = [
 
 export function Tracks() {
   return (
-    <section id="tracks" className="relative scroll-mt-20 py-24 md:py-32">
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute left-0 top-1/4 h-[420px] w-[420px] rounded-full bg-[radial-gradient(circle_at_center,var(--accent-2),transparent_60%)] opacity-10 blur-3xl"
-      />
-      <div className="mx-auto max-w-7xl px-5 sm:px-8">
+    <section id="tracks" className="scroll-mt-24 bg-cream py-28 md:py-40">
+      <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
         <SectionHeading
           eyebrow="Tracks & Challenges"
           title={
@@ -82,32 +79,34 @@ export function Tracks() {
         <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {tracks.map((track, i) => (
             <Reveal key={track.title} delay={(i % 3) * 0.08}>
-              <article className="premium-border group flex h-full flex-col rounded-3xl border border-border bg-surface p-7 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_20px_60px_-20px_rgba(139,92,246,0.35)]">
+              <article className="group relative flex h-full flex-col rounded-2xl border border-transparent bg-white p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-accent/60 hover:shadow-[0_24px_48px_-24px_rgba(232,90,79,0.45)]">
                 <div className="flex items-start justify-between">
-                  <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl border border-border bg-accent-soft text-accent">
+                  <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-accent-soft text-accent-strong">
                     <track.icon className="h-6 w-6" />
                   </span>
-                  <ArrowUpRight className="h-5 w-5 text-muted opacity-0 transition-all duration-300 group-hover:text-accent group-hover:opacity-100" />
+                  <ArrowUpRight className="h-5 w-5 text-muted opacity-0 transition-all duration-300 group-hover:text-accent-strong group-hover:opacity-100" />
                 </div>
-                <h3 className="mt-6 font-display text-xl font-semibold tracking-tight">
+                <h3 className="mt-6 font-display text-xl font-bold tracking-tight">
                   {track.title}
                 </h3>
-                <p className="mt-3 flex-1 text-sm leading-relaxed text-muted">
+                <p className="mt-3 flex-1 text-sm leading-relaxed font-medium text-muted">
                   {track.description}
                 </p>
                 <div className="mt-6 flex flex-wrap gap-2">
                   {track.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="rounded-full border border-border px-2.5 py-1 text-[11px] text-muted"
+                      className="rounded-full border border-border px-2.5 py-1 text-[11px] font-semibold text-muted"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
-                <div className="mt-6 flex items-center justify-between border-t border-border pt-5">
-                  <span className="text-xs uppercase tracking-wider text-muted">Prize pool</span>
-                  <span className="text-gradient font-display text-lg font-bold">{track.prize}</span>
+                <div className="mt-6 flex items-center justify-between border-t-2 border-cream pt-5">
+                  <span className="text-xs font-bold uppercase tracking-wider text-muted">
+                    Prize pool
+                  </span>
+                  <span className="text-gradient font-display text-lg font-extrabold">{track.prize}</span>
                 </div>
               </article>
             </Reveal>
@@ -115,10 +114,13 @@ export function Tracks() {
         </div>
 
         <Reveal delay={0.15}>
-          <p className="mt-10 text-center text-sm text-muted">
-            Every winning team also receives ₹50,000 in cloud credits, fast-track interviews with
-            hiring partners, and a direct slot to showcase at demo day.
-          </p>
+          <div className="mt-10 flex flex-col items-center gap-4 text-center">
+            <PixelBolt aria-hidden="true" className="pixel-hover w-8" />
+            <p className="max-w-xl text-sm font-medium text-muted">
+              Every winning team also receives ₹50,000 in cloud credits, fast-track interviews with
+              hiring partners, and a direct slot to showcase at demo day.
+            </p>
+          </div>
         </Reveal>
       </div>
     </section>

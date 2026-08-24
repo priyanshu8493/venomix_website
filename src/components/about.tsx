@@ -1,6 +1,7 @@
-import { Brain, Handshake, Rocket, ShieldCheck } from "lucide-react";
+import { Handshake, Brain, Rocket, ShieldCheck } from "lucide-react";
 import { Reveal } from "@/components/reveal";
 import { SectionHeading } from "@/components/section-heading";
+import { PixelHeart, PixelSparkle } from "@/components/pixel-art";
 
 const features = [
   {
@@ -34,8 +35,8 @@ const milestones = [
 
 export function About() {
   return (
-    <section id="about" className="relative scroll-mt-20 py-24 md:py-32">
-      <div className="mx-auto grid max-w-7xl items-center gap-16 px-5 sm:px-8 lg:grid-cols-2">
+    <section id="about" className="scroll-mt-24 py-28 md:py-40">
+      <div className="mx-auto grid max-w-[1200px] items-center gap-16 px-5 sm:px-8 lg:grid-cols-2">
         <div>
           <SectionHeading
             align="left"
@@ -70,11 +71,11 @@ export function About() {
             {features.map((feature, i) => (
               <Reveal key={feature.title} delay={0.1 + i * 0.07}>
                 <div className="flex gap-4">
-                  <span className="mt-0.5 inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-border bg-accent-soft text-accent">
+                  <span className="mt-0.5 inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-accent-soft text-accent-strong">
                     <feature.icon className="h-5 w-5" />
                   </span>
                   <span>
-                    <span className="block font-semibold">{feature.title}</span>
+                    <span className="block font-bold">{feature.title}</span>
                     <span className="mt-1 block text-sm leading-relaxed text-muted">
                       {feature.text}
                     </span>
@@ -87,19 +88,25 @@ export function About() {
 
         <div className="space-y-5">
           <Reveal delay={0.15}>
-            <figure className="premium-border relative overflow-hidden rounded-3xl border border-border bg-surface p-8 md:p-9">
-              <blockquote className="font-display text-xl font-medium leading-relaxed md:text-2xl">
+            <figure className="relative overflow-hidden rounded-3xl border-2 border-accent/25 bg-white p-8 transition-all duration-300 hover:border-accent/60 md:p-9">
+              <PixelHeart
+                aria-hidden="true"
+                className="pointer-events-none absolute top-6 right-6 w-10 opacity-90"
+              />
+              <blockquote className="font-display text-xl leading-relaxed font-bold tracking-tight md:text-2xl">
                 “We don&apos;t want you to just attend an event. We want you to leave having built
                 something you&apos;re proud of — surrounded by people who push you further than
                 you thought you could go.”
               </blockquote>
               <figcaption className="mt-6 flex items-center gap-4">
-                <span className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-gradient-brand font-display text-sm font-bold text-white">
+                <span className="bg-gradient-brand inline-flex h-12 w-12 items-center justify-center rounded-full font-display text-sm font-bold text-white">
                   AM
                 </span>
                 <span>
-                  <span className="block font-semibold">Aarav Mehta</span>
-                  <span className="block text-sm text-muted">Founder & Lead Organizer, Venomix</span>
+                  <span className="block font-bold">Aarav Mehta</span>
+                  <span className="block text-sm font-medium text-muted">
+                    Founder & Lead Organizer, Venomix
+                  </span>
                 </span>
               </figcaption>
             </figure>
@@ -108,15 +115,19 @@ export function About() {
           <div className="grid grid-cols-2 gap-5">
             {milestones.map((item, i) => (
               <Reveal key={item.label} delay={0.2 + i * 0.08}>
-                <div className="rounded-2xl border border-border bg-surface p-6 transition-colors duration-300 hover:border-accent/50">
-                  <div className="text-gradient font-display text-3xl font-bold tracking-tight md:text-4xl">
+                <div className="group rounded-2xl border border-border bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-accent/50 hover:shadow-[0_18px_36px_-20px_rgba(232,90,79,0.4)]">
+                  <div className="text-gradient font-display text-3xl font-extrabold tracking-tight md:text-4xl">
                     {item.value}
                   </div>
-                  <div className="mt-1.5 text-sm text-muted">{item.label}</div>
+                  <div className="mt-1.5 text-sm font-medium text-muted">{item.label}</div>
                 </div>
               </Reveal>
             ))}
           </div>
+
+          <Reveal delay={0.3} className="flex justify-end pr-4">
+            <PixelSparkle aria-hidden="true" className="pixel-hover w-8 opacity-80" />
+          </Reveal>
         </div>
       </div>
     </section>

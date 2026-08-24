@@ -164,8 +164,8 @@ export function Schedule() {
   const day = days.find((d) => d.id === activeDay) ?? days[0];
 
   return (
-    <section id="schedule" className="relative scroll-mt-20 bg-surface/40 py-24 md:py-32">
-      <div className="mx-auto max-w-7xl px-5 sm:px-8">
+    <section id="schedule" className="scroll-mt-24 py-28 md:py-40">
+      <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
         <SectionHeading
           eyebrow="Schedule"
           title={
@@ -180,15 +180,15 @@ export function Schedule() {
           <ol className="relative mx-auto mt-16 grid max-w-5xl grid-cols-2 gap-x-6 gap-y-8 md:grid-cols-5">
             <span
               aria-hidden="true"
-              className="absolute top-[7px] right-4 left-4 hidden border-t border-dashed border-border md:block"
+              className="absolute top-[7px] right-4 left-4 hidden border-t-2 border-dashed border-accent/35 md:block"
             />
             {milestones.map((m) => (
               <li key={m.title} className="relative flex flex-col gap-2 md:items-center md:text-center">
-                <span className="h-3.5 w-3.5 shrink-0 rounded-full border-2 border-accent bg-background" />
-                <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-accent">
+                <span className="h-3.5 w-3.5 shrink-0 rounded-[3px] border-2 border-accent bg-white" />
+                <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-accent-strong">
                   {m.date}
                 </span>
-                <span className="-mt-1 text-sm font-medium leading-snug">{m.title}</span>
+                <span className="-mt-1 text-sm leading-snug font-bold">{m.title}</span>
               </li>
             ))}
           </ol>
@@ -196,7 +196,7 @@ export function Schedule() {
 
         <Reveal delay={0.2}>
           <div className="mt-20 flex justify-center">
-            <div className="inline-flex flex-wrap justify-center gap-1 rounded-full border border-border bg-surface p-1.5">
+            <div className="inline-flex flex-wrap justify-center gap-1 rounded-2xl border border-border bg-white p-1.5 shadow-[0_10px_30px_-18px_rgba(26,26,26,0.3)]">
               {days.map((d) => (
                 <button
                   key={d.id}
@@ -205,14 +205,14 @@ export function Schedule() {
                     setActiveDay(d.id);
                     setOpenSession(null);
                   }}
-                  className={`relative rounded-full px-5 py-2 text-sm font-semibold transition-colors duration-300 ${
-                    activeDay === d.id ? "text-white" : "text-muted hover:text-foreground"
+                  className={`relative rounded-xl px-5 py-2 text-sm font-bold transition-colors duration-300 ${
+                    activeDay === d.id ? "text-white" : "text-muted hover:text-accent-strong"
                   }`}
                 >
                   {activeDay === d.id && (
                     <motion.span
                       layoutId="day-pill"
-                      className="absolute inset-0 rounded-full bg-gradient-brand"
+                      className="bg-accent absolute inset-0 rounded-xl"
                       transition={{ type: "spring", stiffness: 350, damping: 32 }}
                     />
                   )}
@@ -224,10 +224,8 @@ export function Schedule() {
         </Reveal>
 
         <Reveal delay={0.25}>
-          <div className="mx-auto mt-10 max-w-3xl rounded-3xl border border-border bg-surface p-6 sm:p-9">
-            <p className="mb-2 text-xs font-semibold uppercase tracking-[0.22em] text-muted">
-              {day.date}
-            </p>
+          <div className="mx-auto mt-10 max-w-3xl rounded-3xl border border-border bg-white p-6 transition-shadow duration-300 hover:shadow-[0_24px_56px_-28px_rgba(232,90,79,0.35)] sm:p-9">
+            <p className="mb-2 text-xs font-bold uppercase tracking-[0.22em] text-muted">{day.date}</p>
             <ul className="divide-y divide-border">
               {day.sessions.map((session) => {
                 const key = `${day.id}-${session.time}`;
@@ -240,18 +238,20 @@ export function Schedule() {
                       aria-expanded={isOpen}
                       className="group flex w-full items-center gap-4 py-4 text-left sm:gap-6"
                     >
-                      <span className="w-14 shrink-0 font-display text-sm font-semibold tabular-nums text-accent">
+                      <span className="w-14 shrink-0 font-display text-sm font-bold tabular-nums text-accent-strong">
                         {session.time}
                       </span>
                       <span className="min-w-0 flex-1">
-                        <span className="block truncate font-medium transition-colors group-hover:text-accent">
+                        <span className="block truncate font-bold group-hover:text-accent-strong">
                           {session.title}
                         </span>
-                        <span className="mt-0.5 block text-xs text-muted">{session.kind}</span>
+                        <span className="mt-0.5 block text-xs font-semibold text-muted">
+                          {session.kind}
+                        </span>
                       </span>
                       <ChevronDown
                         className={`h-4 w-4 shrink-0 text-muted transition-transform duration-300 ${
-                          isOpen ? "rotate-180 text-accent" : ""
+                          isOpen ? "rotate-180 text-accent-strong" : ""
                         }`}
                       />
                     </button>
@@ -264,7 +264,7 @@ export function Schedule() {
                           transition={{ duration: 0.3, ease: "easeInOut" }}
                           className="overflow-hidden"
                         >
-                          <p className="pb-5 pl-[4.5rem] text-sm leading-relaxed text-muted sm:pl-[5.5rem]">
+                          <p className="pb-5 pl-[4.5rem] text-sm leading-relaxed font-medium text-muted sm:pl-[5.5rem]">
                             {session.detail}
                           </p>
                         </motion.div>
@@ -278,7 +278,7 @@ export function Schedule() {
         </Reveal>
 
         <Reveal delay={0.3}>
-          <p className="mt-8 text-center text-sm text-muted">
+          <p className="mt-8 text-center text-sm font-medium text-muted">
             Full agenda with speaker lineups drops two weeks before the event.
           </p>
         </Reveal>

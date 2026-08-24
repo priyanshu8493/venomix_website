@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
-import { Inter, Space_Grotesk } from "next/font/google";
+import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
@@ -11,9 +11,10 @@ const inter = Inter({
   display: "swap",
 });
 
-const spaceGrotesk = Space_Grotesk({
+const poppins = Poppins({
   subsets: ["latin"],
-  variable: "--font-space",
+  weight: ["600", "700", "800"],
+  variable: "--font-poppins",
   display: "swap",
 });
 
@@ -64,21 +65,15 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: [
-    { media: "(prefers-color-scheme: dark)", color: "#060609" },
-    { media: "(prefers-color-scheme: light)", color: "#f7f7f9" },
-  ],
+  themeColor: "#F97D5F",
   width: "device-width",
   initialScale: 1,
 };
 
-const themeInit = `(function(){try{var t=localStorage.getItem("venomix-theme");if(!t){t=window.matchMedia("(prefers-color-scheme: light)").matches?"light":"dark";}document.documentElement.classList.remove("light","dark");document.documentElement.classList.add(t);}catch(e){document.documentElement.classList.add("dark");}})();`;
-
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.variable} ${spaceGrotesk.variable} min-h-screen antialiased`}>
-        <script dangerouslySetInnerHTML={{ __html: themeInit }} />
+    <html lang="en">
+      <body className={`${inter.variable} ${poppins.variable} min-h-screen antialiased`}>
         <Navbar />
         <main>{children}</main>
         <Footer />
