@@ -9,7 +9,7 @@ import { GeoTriangle, PixelSparkle } from "@/components/pixel-art";
 
 const perks = [
   "Free entry — meals, swag and endless caffeine included",
-  "₹12L+ track prizes plus ₹50,000 cloud credits per winning team",
+  "₹24,000 prize pool — ₹12K winner, ₹7K second, ₹5K third",
   "40+ mentors cycling through the floor all sprint long",
   "Fast-track interviews with hiring partners",
 ];

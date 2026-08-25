@@ -117,7 +117,7 @@ export default function OpengraphImage() {
             fontWeight: 700,
           }}
         >
-          500 builders · ₹12L+ prizes · venomix.dev
+          500 builders · ₹24K prize pool · venomix.dev
         </div>
       </div>
     ),

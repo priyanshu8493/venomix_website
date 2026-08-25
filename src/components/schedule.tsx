@@ -146,7 +146,7 @@ const days: { id: string; label: string; date: string; sessions: Session[] }[] =
         time: "23:30",
         title: "Awards ceremony",
         kind: "Ceremony",
-        detail: "₹12L+ across track prizes, special categories and the grand prize — crowned the same night.",
+        detail: "₹12,000 / ₹7,000 / ₹5,000 across the podium — winners crowned the same night.",
       },
     ],
   },

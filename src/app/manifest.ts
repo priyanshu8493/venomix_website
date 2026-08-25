@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "Venomix — Build. Innovate. Elevate.",
     short_name: "Venomix",
     description:
-      "India's premier 12-hour speed hackathon. 500 builders, ₹12L+ prizes, six tracks. Sept 11–12, 2026 · Kolkata.",
+      "India's premier 12-hour speed hackathon. 500 builders, ₹24K prize pool, six tracks. Sept 11–12, 2026 · Kolkata.",
     start_url: "/",
     display: "standalone",
     background_color: "#FAFAFA",

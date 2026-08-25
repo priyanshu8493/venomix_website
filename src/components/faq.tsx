@@ -15,7 +15,7 @@ const faqs: Faq[] = [
     category: "General",
     question: "What exactly is Venomix?",
     answer:
-      "A 12-hour speed hackathon in Kolkata where 500 builders team up to ship working products across six tracks — judged by engineers, founders and investors, with ₹12L+ in prizes. Kickoff night on Sept 11, one relentless build sprint on Sept 12.",
+      "A 12-hour speed hackathon in Kolkata where 500 builders team up to ship working products across six tracks — judged by engineers, founders and investors, with a ₹24,000 prize pool. Kickoff night on Sept 11, one relentless build sprint on Sept 12.",
   },
   {
     category: "General",
@@ -79,9 +79,9 @@ const faqs: Faq[] = [
   },
   {
     category: "Prizes",
-    question: "How is the ₹12L+ prize pool split?",
+    question: "How is the prize pool split?",
     answer:
-      "Each of the six tracks awards its own pool, plus a grand prize, a best-first-hackathon award, and sponsor special categories. Track pools range from ₹1.5L to ₹2.5L.",
+      "A clean podium: ₹12,000 for the winning team, ₹7,000 for second place, and ₹5,000 for third — awarded at the ceremony on the same night. Partners may add spot prizes in special categories on top.",
   },
   {
     category: "Post-Hackathon",

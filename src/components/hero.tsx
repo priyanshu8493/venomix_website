@@ -8,7 +8,7 @@ import { PixelBolt, PixelFlower, PixelHeart, PixelSparkle } from "@/components/p
 
 const stats = [
   { value: "500+", label: "Hackers on-site" },
-  { value: "₹12L+", label: "Prize pool" },
+  { value: "₹24K+", label: "Prize pool" },
   { value: "40+", label: "Mentors & judges" },
   { value: "12hrs", label: "One non-stop sprint" },
 ];

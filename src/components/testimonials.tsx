@@ -8,7 +8,7 @@ import { SectionHeading } from "@/components/section-heading";
 
 const metrics = [
   { end: 500, suffix: "", label: "Seats on the line" },
-  { end: 12, prefix: "₹", suffix: "L+", label: "Prize pool on the table" },
+  { end: 24, prefix: "₹", suffix: "K", label: "Prize pool on the table" },
   { end: 40, suffix: "+", label: "Mentors & judges" },
   { end: 6, suffix: "", label: "Tracks, one sprint" },
 ];

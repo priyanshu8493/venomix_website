@@ -1,11 +1,13 @@
 import {
   ArrowUpRight,
+  Award,
   Blocks,
   Brain,
   HeartPulse,
   Landmark,
   Leaf,
   Sparkles,
+  Trophy,
 } from "lucide-react";
 import { Reveal } from "@/components/reveal";
 import { SectionHeading } from "@/components/section-heading";
@@ -17,7 +19,6 @@ const tracks = [
     title: "AI & Machine Learning",
     description:
       "Agents, RAG pipelines, on-device inference — build the intelligent systems everyone else only demos.",
-    prize: "₹2,50,000",
     tags: ["LLM APIs", "GPU credits", "Vector DBs"],
   },
   {
@@ -25,7 +26,6 @@ const tracks = [
     title: "Web3 & Decentralization",
     description:
       "Protocols, DAOs and on-chain tooling. Ship something the decentralized internet actually needs.",
-    prize: "₹2,00,000",
     tags: ["Testnet faucets", "Smart contract audits", "Wallet SDKs"],
   },
   {
@@ -33,7 +33,6 @@ const tracks = [
     title: "FinTech",
     description:
       "Reimagine payments, lending and insurance for the next billion users — with sandbox access to real rails.",
-    prize: "₹2,00,000",
     tags: ["UPI sandboxes", "KYC APIs", "Ledger infra"],
   },
   {
@@ -41,7 +40,6 @@ const tracks = [
     title: "HealthTech",
     description:
       "From diagnostics to mental health — technology that measurably improves lives, judged by clinicians.",
-    prize: "₹1,50,000",
     tags: ["Health datasets", "Wearable SDKs", "Clinical mentors"],
   },
   {
@@ -49,7 +47,6 @@ const tracks = [
     title: "Climate & Sustainability",
     description:
       "Energy, agriculture, waste — build for the planet with partners working on decarbonization at scale.",
-    prize: "₹1,50,000",
     tags: ["Satellite data", "Sensor kits", "Impact mentors"],
   },
   {
@@ -57,9 +54,14 @@ const tracks = [
     title: "Open Innovation",
     description:
       "No guardrails. Bring the idea nobody has a category for yet and make the judges argue about it.",
-    prize: "₹2,50,000",
     tags: ["Any stack", "Wildcard slots", "Everything goes"],
   },
+];
+
+const podium = [
+  { icon: Trophy, rank: "Winner", amount: "₹12,000" },
+  { icon: Award, rank: "Second place", amount: "₹7,000" },
+  { icon: Sparkles, rank: "Third place", amount: "₹5,000" },
 ];
 
 export function Tracks() {
@@ -73,7 +75,7 @@ export function Tracks() {
               Six arenas. <span className="text-gradient">One relentless standard.</span>
             </>
           }
-          description="Pick a lane or blur them together. Every track ships with dedicated mentors, curated resources, and a prize pool worth fighting for."
+          description="Pick a lane or blur them together. Every track ships with dedicated mentors, curated resources, and one podium worth fighting for."
         />
 
         <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -102,23 +104,37 @@ export function Tracks() {
                     </span>
                   ))}
                 </div>
-                <div className="mt-6 flex items-center justify-between border-t-2 border-cream pt-5">
-                  <span className="text-xs font-bold uppercase tracking-wider text-muted">
-                    Prize pool
-                  </span>
-                  <span className="text-gradient font-display text-lg font-extrabold">{track.prize}</span>
-                </div>
               </article>
             </Reveal>
           ))}
         </div>
 
         <Reveal delay={0.15}>
-          <div className="mt-10 flex flex-col items-center gap-4 text-center">
-            <PixelBolt aria-hidden="true" className="pixel-hover w-8" />
-            <p className="max-w-xl text-sm font-medium text-muted">
-              Every winning team also receives ₹50,000 in cloud credits, fast-track interviews with
-              hiring partners, and a direct slot to showcase at demo day.
+          <div className="bg-hero-gradient relative mx-auto mt-14 max-w-4xl overflow-hidden rounded-3xl p-8 text-white md:p-10">
+            <PixelBolt aria-hidden="true" className="animate-float-slow absolute -bottom-4 right-6 w-16 opacity-80" />
+            <p className="text-center text-xs font-bold uppercase tracking-[0.28em] text-white/85">
+              The podium — awarded the same night
+            </p>
+            <div className="relative mt-7 grid gap-4 sm:grid-cols-3">
+              {podium.map((prize, i) => (
+                <div
+                  key={prize.rank}
+                  className={`flex flex-col items-center gap-1 rounded-2xl border border-white/30 bg-white/15 px-4 py-5 backdrop-blur-sm ${
+                    i === 0 ? "sm:-translate-y-2 sm:bg-white/25" : ""
+                  }`}
+                >
+                  <prize.icon className="h-6 w-6" />
+                  <span className="mt-1 font-display text-2xl font-extrabold tracking-tight md:text-3xl">
+                    {prize.amount}
+                  </span>
+                  <span className="text-xs font-bold uppercase tracking-wider text-white/80">
+                    {prize.rank}
+                  </span>
+                </div>
+              ))}
+            </div>
+            <p className="relative mt-7 text-center text-sm font-medium text-white/85">
+              Plus fast-track interviews with hiring partners and partner credits for winning teams.
             </p>
           </div>
         </Reveal>

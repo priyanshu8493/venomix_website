@@ -14,7 +14,7 @@ const jsonLd = {
   "@type": "Event",
   name: "Venomix 2026 — India's Premier Speed Hackathon",
   description:
-    "A 12-hour speed hackathon in Kolkata with 500 builders, ₹12L+ in prizes, world-class mentors and six innovation tracks. Kickoff night Sept 11, one non-stop build sprint on Sept 12.",
+    "A 12-hour speed hackathon in Kolkata with 500 builders, a ₹24,000 prize pool, world-class mentors and six innovation tracks. Kickoff night Sept 11, one non-stop build sprint on Sept 12.",
   startDate: "2026-09-11T18:00:00+05:30",
   endDate: "2026-09-12T23:59:00+05:30",
   eventStatus: "https://schema.org/EventScheduled",
