@@ -15,7 +15,7 @@ const faqs: Faq[] = [
     category: "General",
     question: "What exactly is Venomix?",
     answer:
-      "A 12-hour speed hackathon in Kolkata where 500 builders team up to ship working products across six tracks — judged by engineers, founders and investors, with a ₹24,000 prize pool. Kickoff night on Sept 11, one relentless build sprint on Sept 12.",
+      "A 12-hour speed hackathon in Kolkata where 20 finalist teams (3 members each, selected from across India) ship working products across six tracks — judged by engineers, founders and investors, with a ₹24,000 prize pool. Kickoff night on Sept 11, one relentless build sprint on Sept 12.",
   },
   {
     category: "General",
@@ -33,7 +33,7 @@ const faqs: Faq[] = [
     category: "Registration",
     question: "How do I register, and when do applications close?",
     answer:
-      "Use the registration form on this page. Applications are reviewed on a rolling basis and close September 5 or when we hit capacity — whichever comes first. Seats are capped at 500, so early is the only safe bet.",
+      "Use the registration form on this page. Applications are reviewed on a rolling basis and close September 5 or when we select all 20 finalist teams — whichever comes first. Each team has 3 members, so spots are limited. Early is the only safe bet.",
   },
   {
     category: "Registration",
@@ -51,7 +51,7 @@ const faqs: Faq[] = [
     category: "Teams",
     question: "What's the maximum team size?",
     answer:
-      "Teams can have 2–4 members. Solo hacking is allowed but statistically less fun. Cross-college and cross-company teams are encouraged.",
+      "Each finalist team has exactly 3 members. Teams are selected from applicants across India. Cross-college and cross-company teams are encouraged.",
   },
   {
     category: "Teams",

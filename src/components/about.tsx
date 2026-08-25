@@ -30,7 +30,7 @@ const milestones = [
   { value: "01", label: "The first edition" },
   { value: "12+", label: "Partner companies" },
   { value: "40+", label: "Mentors & judges" },
-  { value: "500+", label: "Seats on the line" },
+  { value: "20", label: "Finalist teams" },
 ];
 
 export function About() {

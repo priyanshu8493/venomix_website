@@ -18,7 +18,7 @@ const meta = [
   { icon: CalendarDays, text: "September 11–12, 2026" },
   { icon: MapPin, text: "Biswa Bangla Convention Centre, Kolkata" },
   { icon: Timer, text: "12 hours, one non-stop sprint" },
-  { icon: Zap, text: "Limited to 500 seats" },
+  { icon: Zap, text: "20 finalist teams · 3 members each" },
 ];
 
 const roles = ["Developer", "Designer", "Product", "Data / ML", "Explorer"];
@@ -107,7 +107,7 @@ export function Register() {
                 <span className="text-gradient">in the arena.</span>
               </>
             }
-            description="Applications take two minutes and are reviewed on a rolling basis. When we hit 500 seats, we close — no extensions."
+            description="Applications take two minutes and are reviewed on a rolling basis. We select 20 finalist teams of 3 members each from across India — early applications stand a better chance."
           />
           <ul className="mt-8 space-y-3.5">
             {perks.map((perk) => (
@@ -323,7 +323,7 @@ export function Register() {
                   {submitting && (
                     <span className="h-4 w-4 animate-spin rounded-full border-2 border-white/40 border-t-white" />
                   )}
-                  {submitting ? "Securing your spot…" : "Claim my seat"}
+                  {submitting ? "Securing your spot…" : "Submit application"}
                 </button>
               </form>
             )}
