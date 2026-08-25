@@ -4,6 +4,7 @@ import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
+import { Loader } from "@/components/loader";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -75,6 +76,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body className={`${inter.variable} ${poppins.variable} min-h-screen antialiased`}>
+        <Loader />
         <Navbar />
         <main>{children}</main>
         <Footer />
