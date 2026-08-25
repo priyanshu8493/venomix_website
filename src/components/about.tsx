@@ -1,7 +1,7 @@
 import { Handshake, Brain, Rocket, ShieldCheck } from "lucide-react";
 import { Reveal } from "@/components/reveal";
 import { SectionHeading } from "@/components/section-heading";
-import { PixelHeart, PixelSparkle } from "@/components/pixel-art";
+import { PixelDiamond, PixelSparkle } from "@/components/pixel-art";
 
 const features = [
   {
@@ -89,7 +89,7 @@ export function About() {
         <div className="space-y-5">
           <Reveal delay={0.15}>
             <figure className="relative overflow-hidden rounded-3xl border-2 border-accent/25 bg-white p-8 transition-all duration-300 hover:border-accent/60 md:p-9">
-              <PixelHeart
+              <PixelDiamond
                 aria-hidden="true"
                 className="pointer-events-none absolute top-6 right-6 w-10 opacity-90"
               />

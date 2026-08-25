@@ -1,6 +1,6 @@
 import { ArrowUpRight, Mic } from "lucide-react";
 import { Reveal } from "@/components/reveal";
-import { PixelBolt, PixelFlower, PixelHeart, PixelSparkle } from "@/components/pixel-art";
+import { PixelBolt, PixelDiamond, PixelFlower, PixelSparkle } from "@/components/pixel-art";
 
 export function CtaBand() {
   return (
@@ -9,7 +9,7 @@ export function CtaBand() {
         <div className="bg-grid mask-radial absolute inset-0 opacity-60" />
         <PixelFlower className="animate-float absolute -top-12 -right-10 w-40 md:w-52" />
         <PixelBolt className="animate-float-slow absolute bottom-16 left-[6%] w-14 md:w-20" />
-        <PixelHeart className="pixel-hover absolute top-1/4 left-[10%] hidden w-12 md:block" />
+        <PixelDiamond className="pixel-hover absolute top-1/4 left-[10%] hidden w-12 md:block" />
         <PixelSparkle className="animate-float absolute right-[18%] bottom-24 w-9" />
       </div>
 

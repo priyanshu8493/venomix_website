@@ -55,19 +55,18 @@ export function PixelFlower({ className }: SpriteProps) {
   return <PixelSprite map={FLOWER} className={className} />;
 }
 
-const HEART = [
-  ".rr...rr.",
-  "rwrr.rrrr",
-  "rrrrrrrrr",
-  "rrrrrrrrr",
-  ".rrrrrrr.",
-  "..rrrrr..",
-  "...rrr...",
-  "....r....",
+const DIAMOND = [
+  "...r...",
+  "..rpr..",
+  ".rpopr.",
+  "rpppppr",
+  ".rpopr.",
+  "..rpr..",
+  "...r...",
 ];
 
-export function PixelHeart({ className }: SpriteProps) {
-  return <PixelSprite map={HEART} className={className} />;
+export function PixelDiamond({ className }: SpriteProps) {
+  return <PixelSprite map={DIAMOND} className={className} />;
 }
 
 const SPARKLE = [

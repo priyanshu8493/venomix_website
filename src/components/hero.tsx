@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowDown, ArrowRight, CalendarDays, MapPin, Users } from "lucide-react";
 import { Countdown } from "@/components/countdown";
-import { PixelBolt, PixelFlower, PixelHeart, PixelSparkle } from "@/components/pixel-art";
+import { PixelBolt, PixelDiamond, PixelFlower, PixelSparkle } from "@/components/pixel-art";
 
 const stats = [
   { value: "20", label: "Finalist teams" },
@@ -34,7 +34,7 @@ export function Hero() {
       <motion.div style={{ y: decorY }} className="pointer-events-none absolute inset-0" aria-hidden="true">
         <div className="bg-grid mask-radial absolute inset-0 opacity-70" />
         <PixelFlower className="pixel-hover animate-float absolute -top-10 -left-12 w-44 sm:w-60 md:-left-6 md:w-72" />
-        <PixelHeart className="pixel-hover animate-float-slow absolute top-24 right-[6%] hidden w-20 sm:block md:w-28" />
+        <PixelDiamond className="pixel-hover animate-float-slow absolute top-24 right-[6%] hidden w-20 sm:block md:w-28" />
         <PixelSparkle className="animate-float-slow absolute top-[16%] right-[22%] w-10 md:w-14" />
         <PixelSparkle className="animate-float absolute top-[42%] left-[7%] hidden w-9 lg:block" />
         <PixelBolt className="pixel-hover animate-float absolute bottom-36 left-[4%] w-16 md:w-24" />
