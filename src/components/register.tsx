@@ -16,7 +16,7 @@ const perks = [
 
 const meta = [
   { icon: CalendarDays, text: "September 11–12, 2026" },
-  { icon: MapPin, text: "Biswa Bangla Convention Centre, Kolkata" },
+  { icon: MapPin, text: "IEM Research Park, Kolkata" },
   { icon: Timer, text: "12 hours, one non-stop sprint" },
   { icon: Zap, text: "20 finalist teams · 3 members each" },
 ];

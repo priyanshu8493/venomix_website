@@ -125,7 +125,7 @@ export function Hero() {
           className="mt-11 flex flex-wrap items-center justify-center gap-x-7 gap-y-3 text-sm font-medium text-white/85"
         >
           <span className="inline-flex items-center gap-2">
-            <MapPin className="h-4 w-4" /> Biswa Bangla Convention Centre, New Town
+            <MapPin className="h-4 w-4" /> IEM Research Park, Kolkata
           </span>
           <span className="inline-flex items-center gap-2">
             <CalendarDays className="h-4 w-4" /> September 11–12

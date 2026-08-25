@@ -21,10 +21,10 @@ const jsonLd = {
   eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
   location: {
     "@type": "Place",
-    name: "Biswa Bangla Convention Centre",
+    name: "IEM Research Park",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "New Town",
+      streetAddress: "Salt Lake",
       addressLocality: "Kolkata",
       addressRegion: "West Bengal",
       postalCode: "700156",
