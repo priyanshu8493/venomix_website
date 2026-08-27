@@ -19,26 +19,28 @@ const poppins = Poppins({
   display: "swap",
 });
 
-const siteUrl = "https://venomix.dev";
+const siteUrl = "https://www.venomix.tech";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Venomix 2026 — Build. Innovate. Elevate.",
+    default: "Venomix 2026 — Venomix Hackathon at IEM Kolkata",
     template: "%s · Venomix",
   },
   description:
-    "Venomix is India's premier 12-hour speed hackathon. 20 finalist teams of 3 builders each, a ₹24,000 prize pool, world-class mentors, and six innovation tracks. September 11–12, 2026 · Kolkata.",
+    "Join Venomix Hackathon at IEM Research Park, Kolkata — India's premier 12-hour speed hackathon. 20 finalist teams, ₹24,000 prize pool, world-class mentors and six innovation tracks. Sept 11–12, 2026.",
   keywords: [
-    "hackathon",
     "Venomix",
+    "Venomix hackathon",
+    "Venomix hackathon IEM",
+    "IEM hackathon",
+    "IEM Research Park hackathon",
     "Kolkata hackathon",
+    "hackathon in Kolkata",
     "speed hackathon",
     "AI hackathon",
-    "Web3",
-    "FinTech",
-    "innovation",
     "student hackathon",
+    "hackathon 2026",
     "India hackathon 2026",
   ],
   authors: [{ name: "Venomix" }],
@@ -49,15 +51,15 @@ export const metadata: Metadata = {
     locale: "en_IN",
     url: siteUrl,
     siteName: "Venomix",
-    title: "Venomix 2026 — Build. Innovate. Elevate.",
+    title: "Venomix 2026 — Venomix Hackathon at IEM Kolkata",
     description:
-      "India's premier 12-hour speed hackathon. 20 finalist teams. ₹24K prize pool. Six tracks. One relentless standard. Sept 11–12, Kolkata.",
+      "India's premier 12-hour speed hackathon at IEM Research Park, Kolkata. 20 finalist teams. ₹24K prize pool. Six tracks. Sept 11–12.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Venomix 2026 — Build. Innovate. Elevate.",
+    title: "Venomix 2026 — Venomix Hackathon at IEM Kolkata",
     description:
-      "India's premier 12-hour speed hackathon. 20 finalist teams. ₹24K prize pool. Six tracks. Sept 11–12, Kolkata.",
+      "India's premier 12-hour speed hackathon at IEM Research Park, Kolkata. 20 finalist teams. ₹24K prize pool. Six tracks. Sept 11–12.",
   },
   robots: {
     index: true,

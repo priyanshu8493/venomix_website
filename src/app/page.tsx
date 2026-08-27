@@ -31,11 +31,11 @@ const jsonLd = {
       addressCountry: "IN",
     },
   },
-  image: ["https://venomix.dev/opengraph-image"],
-  url: "https://venomix.dev",
+  image: ["https://www.venomix.tech/opengraph-image"],
+  url: "https://www.venomix.tech",
   offers: {
     "@type": "Offer",
-    url: "https://venomix.dev/#register",
+    url: "https://www.venomix.tech/#register",
     price: "0",
     priceCurrency: "INR",
     availability: "https://schema.org/InStock",
@@ -44,7 +44,7 @@ const jsonLd = {
   organizer: {
     "@type": "Organization",
     name: "Venomix",
-    url: "https://venomix.dev",
+    url: "https://www.venomix.tech",
   },
 };
 

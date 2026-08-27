@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://venomix.dev/sitemap.xml",
+    sitemap: "https://www.venomix.tech/sitemap.xml",
   };
 }

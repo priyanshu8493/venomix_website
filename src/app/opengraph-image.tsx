@@ -117,7 +117,7 @@ export default function OpengraphImage() {
             fontWeight: 700,
           }}
         >
-          20 teams · ₹24K prize pool · venomix.dev
+          20 teams · ₹24K prize pool · venomix.tech
         </div>
       </div>
     ),
