@@ -58,6 +58,15 @@ export function Hero() {
           First edition · Sept 11–12, 2026 · Kolkata
         </motion.div>
 
+        <motion.p
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="mt-5 max-w-3xl text-[13px] leading-relaxed font-medium text-white/85 md:text-base"
+        >
+          Organized by Department of Computer Applications (CA), in association with Institution&apos;s Innovation Council (IIC), University of Engineering and Management (UEM), Kolkata
+        </motion.p>
+
         <h1 className="mt-8 font-display text-[clamp(4rem,9vw,7.5rem)] leading-[1.06] font-extrabold tracking-[-0.02em] text-white">
           {headline.map((line, i) => (
             <span key={line} className="block overflow-hidden pb-1">
