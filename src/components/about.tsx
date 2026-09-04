@@ -87,31 +87,6 @@ export function About() {
         </div>
 
         <div className="space-y-5">
-          <Reveal delay={0.15}>
-            <figure className="relative overflow-hidden rounded-3xl border-2 border-accent/25 bg-white p-8 transition-all duration-300 hover:border-accent/60 md:p-9">
-              <PixelDiamond
-                aria-hidden="true"
-                className="pointer-events-none absolute top-6 right-6 w-10 opacity-90"
-              />
-              <blockquote className="font-display text-xl leading-relaxed font-bold tracking-tight md:text-2xl">
-                “We don&apos;t want you to just attend an event. We want you to leave having built
-                something you&apos;re proud of — surrounded by people who push you further than
-                you thought you could go.”
-              </blockquote>
-              <figcaption className="mt-6 flex items-center gap-4">
-                <span className="bg-gradient-brand inline-flex h-12 w-12 items-center justify-center rounded-full font-display text-sm font-bold text-white">
-                  AM
-                </span>
-                <span>
-                  <span className="block font-bold">Aarav Mehta</span>
-                  <span className="block text-sm font-medium text-muted">
-                    Founder & Lead Organizer, Venomix
-                  </span>
-                </span>
-              </figcaption>
-            </figure>
-          </Reveal>
-
           <div className="grid grid-cols-2 gap-5">
             {milestones.map((item, i) => (
               <Reveal key={item.label} delay={0.2 + i * 0.08}>
