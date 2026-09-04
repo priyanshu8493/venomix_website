@@ -162,6 +162,9 @@ export function Footer() {
       <div className="border-t border-border">
         <div className="mx-auto flex max-w-[1200px] flex-col items-center justify-between gap-3 px-5 py-6 text-xs font-medium text-muted sm:flex-row sm:px-8">
           <p>© 2026 Venomix. All rights reserved.</p>
+          <p className="max-w-xl text-center text-[11px] leading-relaxed text-muted sm:text-right">
+            Organized by Department of Computer Applications (CA), in association with Institution&apos;s Innovation Council (IIC), University of Engineering and Management (UEM), Kolkata.
+          </p>
           <p className="flex gap-5">
             <a href="#" className="font-semibold transition-colors duration-200 hover:text-accent-strong">
               Privacy
