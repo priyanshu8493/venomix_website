@@ -24,17 +24,17 @@ const siteUrl = "https://www.venomix.tech";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Venomix 2026 — Venomix Hackathon at IEM Kolkata",
+    default: "Venomix 2026 — Venomix Hackathon at UEM Kolkata",
     template: "%s · Venomix",
   },
   description:
-    "Join Venomix Hackathon at IEM Research Park, Kolkata — India's premier 12-hour speed hackathon. 20 finalist teams, ₹24,000 prize pool, world-class mentors and six innovation tracks. Sept 11–12, 2026.",
+    "Join Venomix Hackathon at UEM Kolkata, Buddha Auditorium — India's premier 12-hour speed hackathon. 15 finalist teams, ₹20,000 prize pool, world-class mentors and six innovation tracks. Sept 11–12, 2026.",
   keywords: [
     "Venomix",
     "Venomix hackathon",
-    "Venomix hackathon IEM",
-    "IEM hackathon",
-    "IEM Research Park hackathon",
+    "Venomix hackathon UEM",
+    "UEM hackathon",
+    "UEM Kolkata hackathon",
     "Kolkata hackathon",
     "hackathon in Kolkata",
     "speed hackathon",
@@ -51,15 +51,15 @@ export const metadata: Metadata = {
     locale: "en_IN",
     url: siteUrl,
     siteName: "Venomix",
-    title: "Venomix 2026 — Venomix Hackathon at IEM Kolkata",
+    title: "Venomix 2026 — Venomix Hackathon at UEM Kolkata",
     description:
-      "India's premier 12-hour speed hackathon at IEM Research Park, Kolkata. 20 finalist teams. ₹24K prize pool. Six tracks. Sept 11–12.",
+      "India's premier 12-hour speed hackathon at UEM Kolkata, Buddha Auditorium. 15 finalist teams. ₹20K prize pool. Six tracks. Sept 11–12.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Venomix 2026 — Venomix Hackathon at IEM Kolkata",
+    title: "Venomix 2026 — Venomix Hackathon at UEM Kolkata",
     description:
-      "India's premier 12-hour speed hackathon at IEM Research Park, Kolkata. 20 finalist teams. ₹24K prize pool. Six tracks. Sept 11–12.",
+      "India's premier 12-hour speed hackathon at UEM Kolkata, Buddha Auditorium. 15 finalist teams. ₹20K prize pool. Six tracks. Sept 11–12.",
   },
   robots: {
     index: true,

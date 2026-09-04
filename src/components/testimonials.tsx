@@ -7,9 +7,9 @@ import { Reveal } from "@/components/reveal";
 import { SectionHeading } from "@/components/section-heading";
 
 const metrics = [
-  { end: 20, suffix: "", label: "Finalist teams" },
-  { end: 24, prefix: "₹", suffix: "K", label: "Prize pool on the table" },
-  { end: 40, suffix: "+", label: "Mentors & judges" },
+  { end: 15, suffix: "", label: "Finalist teams" },
+  { end: 20, prefix: "₹", suffix: "K", label: "Prize pool on the table" },
+  { staticText: "TBA", label: "Mentors & judges" },
   { end: 6, suffix: "", label: "Tracks, one sprint" },
 ];
 
@@ -94,7 +94,17 @@ export function Testimonials() {
         <div className="grid grid-cols-2 gap-x-6 gap-y-10 lg:grid-cols-4">
           {metrics.map((metric) => (
             <Reveal key={metric.label} className="flex flex-col items-center gap-2 text-center">
-              <CountUp end={metric.end} prefix={metric.prefix} suffix={metric.suffix} />
+              {"staticText" in metric && metric.staticText ? (
+                <span className="text-gradient font-display text-4xl font-extrabold tracking-tight md:text-5xl">
+                  {metric.staticText}
+                </span>
+              ) : (
+                <CountUp
+                  end={(metric as { end: number }).end}
+                  prefix={(metric as { prefix?: string }).prefix}
+                  suffix={(metric as { suffix?: string }).suffix}
+                />
+              )}
               <span className="text-sm font-medium text-muted">{metric.label}</span>
             </Reveal>
           ))}

@@ -12,7 +12,7 @@ const features = [
   {
     icon: Brain,
     title: "Learn from the best",
-    text: "40+ mentors and judges from frontier labs, unicorns and YC startups — cycling through the floor all sprint long.",
+      text: "Mentors and judges from frontier labs, unicorns and YC startups — revealing soon.",
   },
   {
     icon: Rocket,
@@ -29,8 +29,8 @@ const features = [
 const milestones = [
   { value: "01", label: "The first edition" },
   { value: "12+", label: "Partner companies" },
-  { value: "40+", label: "Mentors & judges" },
-  { value: "20", label: "Finalist teams" },
+  { value: "TBA", label: "Mentors & judges" },
+  { value: "15", label: "Finalist teams" },
 ];
 
 export function About() {

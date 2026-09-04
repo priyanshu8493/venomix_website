@@ -59,9 +59,9 @@ const tracks = [
 ];
 
 const podium = [
-  { icon: Trophy, rank: "Winner", amount: "₹12,000" },
-  { icon: Award, rank: "Second place", amount: "₹7,000" },
-  { icon: Sparkles, rank: "Third place", amount: "₹5,000" },
+  { icon: Trophy, rank: "Winner", amount: "₹10,000" },
+  { icon: Award, rank: "Second place", amount: "₹6,000" },
+  { icon: Sparkles, rank: "Third place", amount: "₹4,000" },
 ];
 
 export function Tracks() {

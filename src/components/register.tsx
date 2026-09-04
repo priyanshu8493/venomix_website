@@ -9,16 +9,16 @@ import { GeoTriangle, PixelSparkle } from "@/components/pixel-art";
 
 const perks = [
   "Free entry — meals, swag and endless caffeine included",
-  "₹24,000 prize pool — ₹12K winner, ₹7K second, ₹5K third",
-  "40+ mentors cycling through the floor all sprint long",
+  "₹20,000 prize pool — ₹10K winner, ₹6K second, ₹4K third",
+  "Mentors and judges — revealing soon",
   "Fast-track interviews with hiring partners",
 ];
 
 const meta = [
   { icon: CalendarDays, text: "September 11–12, 2026" },
-  { icon: MapPin, text: "IEM Research Park, Kolkata" },
+  { icon: MapPin, text: "UEM Kolkata, Buddha Auditorium" },
   { icon: Timer, text: "12 hours, one non-stop sprint" },
-  { icon: Zap, text: "20 finalist teams · 3 members each" },
+  { icon: Zap, text: "15 finalist teams · 3 members each" },
 ];
 
 const roles = ["Developer", "Designer", "Product", "Data / ML", "Explorer"];
@@ -107,7 +107,7 @@ export function Register() {
                 <span className="text-gradient">in the arena.</span>
               </>
             }
-            description="Applications take two minutes and are reviewed on a rolling basis. We select 20 finalist teams of 3 members each from across India — early applications stand a better chance."
+            description="Applications take two minutes and are reviewed on a rolling basis. We select 15 finalist teams of 3 members each from across India — early applications stand a better chance."
           />
           <ul className="mt-8 space-y-3.5">
             {perks.map((perk) => (

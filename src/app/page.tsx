@@ -14,20 +14,19 @@ const jsonLd = {
   "@type": "Event",
   name: "Venomix 2026 — India's Premier Speed Hackathon",
   description:
-    "A 12-hour speed hackathon in Kolkata with 20 finalist teams of 3 builders each, a ₹24,000 prize pool, world-class mentors and six innovation tracks. Kickoff night Sept 11, one non-stop build sprint on Sept 12.",
+    "A 12-hour speed hackathon in Kolkata with 15 finalist teams of 3 builders each, a ₹20,000 prize pool, world-class mentors and six innovation tracks. Kickoff night Sept 11, one non-stop build sprint on Sept 12.",
   startDate: "2026-09-11T18:00:00+05:30",
   endDate: "2026-09-12T23:59:00+05:30",
   eventStatus: "https://schema.org/EventScheduled",
   eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
   location: {
     "@type": "Place",
-    name: "IEM Research Park",
+    name: "UEM Kolkata, Buddha Auditorium",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Salt Lake",
+      streetAddress: "UEM Kolkata",
       addressLocality: "Kolkata",
       addressRegion: "West Bengal",
-      postalCode: "700156",
       addressCountry: "IN",
     },
   },

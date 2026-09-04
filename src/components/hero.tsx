@@ -7,9 +7,9 @@ import { Countdown } from "@/components/countdown";
 import { PixelBolt, PixelDiamond, PixelFlower, PixelSparkle } from "@/components/pixel-art";
 
 const stats = [
-  { value: "20", label: "Finalist teams" },
-  { value: "60", label: "Builders across India" },
-  { value: "₹24K+", label: "Prize pool" },
+  { value: "15", label: "Finalist teams" },
+  { value: "45", label: "Builders across India" },
+  { value: "₹20K+", label: "Prize pool" },
   { value: "12hrs", label: "One non-stop sprint" },
 ];
 
@@ -82,7 +82,7 @@ export function Hero() {
           transition={{ duration: 0.55, delay: 0.65 }}
           className="mt-7 max-w-2xl text-lg leading-relaxed font-medium text-white/90 md:text-2xl md:leading-relaxed"
         >
-          Venomix is where India&apos;s 20 finalist teams — 60 of the sharpest builders, designers
+          Venomix is where India&apos;s 15 finalist teams — 45 of the sharpest builders, designers
           and dreamers — collide for a single 12-hour sprint. World-class mentors, serious prizes,
           and zero tolerance for thinking small. Speed is the whole point.
         </motion.p>
@@ -125,13 +125,13 @@ export function Hero() {
           className="mt-11 flex flex-wrap items-center justify-center gap-x-7 gap-y-3 text-sm font-medium text-white/85"
         >
           <span className="inline-flex items-center gap-2">
-            <MapPin className="h-4 w-4" /> IEM Research Park, Kolkata
+            <MapPin className="h-4 w-4" /> UEM Kolkata, Buddha Auditorium
           </span>
           <span className="inline-flex items-center gap-2">
             <CalendarDays className="h-4 w-4" /> September 11–12
           </span>
           <span className="inline-flex items-center gap-2">
-            <Users className="h-4 w-4" /> 20 teams · 3 members each
+            <Users className="h-4 w-4" /> 15 teams · 3 members each
           </span>
         </motion.div>
       </motion.div>

@@ -15,7 +15,7 @@ const faqs: Faq[] = [
     category: "General",
     question: "What exactly is Venomix?",
     answer:
-      "A 12-hour speed hackathon in Kolkata where 20 finalist teams (3 members each, selected from across India) ship working products across six tracks — judged by engineers, founders and investors, with a ₹24,000 prize pool. Kickoff night on Sept 11, one relentless build sprint on Sept 12.",
+      "A 12-hour speed hackathon in Kolkata where 15 finalist teams (3 members each, selected from across India) ship working products across six tracks — judged by engineers, founders and investors, with a ₹20,000 prize pool. Kickoff night on Sept 11, one relentless build sprint on Sept 12.",
   },
   {
     category: "General",
@@ -33,7 +33,7 @@ const faqs: Faq[] = [
     category: "Registration",
     question: "How do I register, and when do applications close?",
     answer:
-      "Use the registration form on this page. Applications are reviewed on a rolling basis and close September 5 or when we select all 20 finalist teams — whichever comes first. Each team has 3 members, so spots are limited. Early is the only safe bet.",
+      "Use the registration form on this page. Applications are reviewed on a rolling basis and close September 5 or when we select all 15 finalist teams — whichever comes first. Each team has 3 members, so spots are limited. Early is the only safe bet.",
   },
   {
     category: "Registration",
@@ -81,7 +81,7 @@ const faqs: Faq[] = [
     category: "Prizes",
     question: "How is the prize pool split?",
     answer:
-      "A clean podium: ₹12,000 for the winning team, ₹7,000 for second place, and ₹5,000 for third — awarded at the ceremony on the same night. Partners may add spot prizes in special categories on top.",
+      "A clean podium: ₹10,000 for the winning team, ₹6,000 for second place, and ₹4,000 for third — awarded at the ceremony on the same night. Partners may add spot prizes in special categories on top.",
   },
   {
     category: "Post-Hackathon",
