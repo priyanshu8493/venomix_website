@@ -8,7 +8,7 @@ import { SectionHeading } from "@/components/section-heading";
 
 const milestones = [
   { date: "Aug 25", title: "Registrations open" },
-  { date: "Sept 5", title: "Team registrations close" },
+  { date: "Rolling", title: "Team registrations close" },
   { date: "Sept 9", title: "Finalist briefing" },
   { date: "Sept 11–12", title: "12-hour sprint in Kolkata" },
   { date: "Sept 12", title: "Winners crowned same night" },
@@ -53,100 +53,68 @@ const days: { id: string; label: string; date: string; sessions: Session[] }[] =
   {
     id: "day1",
     label: "Kickoff Night",
-    date: "Sept 11 · Fri evening",
+    date: "Sept 11 · Fri · 5 PM onwards",
     sessions: [
       {
         time: "17:00",
-        title: "Check-in, badges & coffee",
+        title: "Reporting & Registration",
         kind: "Logistics",
-        detail: "Collect your kit, meet the volunteers, find your squad's table. Doors open sharp.",
+        detail: "Doors open at 5 PM. Complete your check-in, collect badges, and settle in.",
       },
       {
-        time: "18:00",
-        title: "Opening ceremony & keynote",
+        time: "17:30",
+        title: "Inauguration Ceremony",
         kind: "Ceremony",
-        detail: "Official launch, partner addresses, and a keynote on building through uncertainty.",
+        detail: "Official launch with partners, organizers, and a keynote on building through uncertainty.",
       },
       {
         time: "19:00",
-        title: "Problem reveal & team formation",
-        kind: "Essential",
-        detail:
-          "Track problem statements go live. Solo hackers get an on-site speed-matching round.",
-      },
-      {
-        time: "20:00",
-        title: "Workshop: Ship fast without breaking everything",
-        kind: "Workshop",
-        detail:
-          "Scoping, stubbing and demo-first architecture — how to have something working by hour three.",
+        title: "Hackathon begins",
+        kind: "Build",
+        detail: "The clock starts. Form your squads, scope your problem, and start building.",
       },
       {
         time: "21:00",
-        title: "Mentor floor opens",
-        kind: "Mentorship",
-        detail: "Validate your idea with mentors from our partner companies before you write a line of code.",
+        title: "Dinner",
+        kind: "Break",
+        detail: "Fuel up — the night is long. Take a breather, recharge, and sync with your team.",
       },
     ],
   },
   {
     id: "day2",
-    label: "Sprint Day",
-    date: "Sept 12 · Sat · 12 hours",
+    label: "Overnight Sprint",
+    date: "Sept 11 night – Sept 12 · 12 AM – 8 AM",
     sessions: [
       {
-        time: "08:00",
-        title: "Doors open & breakfast",
-        kind: "Ritual",
-        detail: "Fuel up, plug in, sync with your team. Coffee is not optional.",
+        time: "00:00",
+        title: "Midnight Snacks",
+        kind: "Break",
+        detail: "Late-night fuel drop to keep the momentum going through the small hours.",
       },
       {
-        time: "09:00",
-        title: "Hacking starts — clock is running",
-        kind: "Build",
-        detail: "Twelve hours on the clock. First commit within the first thirty minutes or it doesn't count.",
-      },
-      {
-        time: "12:00",
-        title: "Mentor speed-rounds",
+        time: "01:00",
+        title: "Open Mentoring & Guidance Sessions",
         kind: "Mentorship",
-        detail: "Ten-minute table-hops with mentors. Get unblocked fast, then get back to building.",
+        detail: "Drop-in mentors available for technical guidance, architecture reviews, and unblocking.",
       },
       {
-        time: "15:00",
-        title: "Halfway checkpoint & snack drop",
-        kind: "Checkpoint",
-        detail: "Quick status pulse across the floor — plus sugar, fruit and caffeine reinforcements.",
+        time: "04:00",
+        title: "Final Sprint",
+        kind: "Build",
+        detail: "Last stretch — polish, demo prep, and ship. No new features, just finish what you started.",
       },
       {
-        time: "18:00",
-        title: "Final stretch: pitch clinic",
-        kind: "Workshop",
-        detail: "Drop-in coaching on demo flow and storytelling while there's still time to fix your narrative.",
-      },
-      {
-        time: "21:00",
-        title: "Code freeze",
+        time: "07:00",
+        title: "Hackathon ends — Code freeze",
         kind: "Deadline",
-        detail: "Repos lock. What's shipped is what's judged. Submit your repo and demo video.",
+        detail: "Repos lock. What's shipped is what's judged.",
       },
       {
-        time: "21:30",
-        title: "Demo expo & first-round judging",
-        kind: "Judging",
-        detail: "Walk the floor, show your build, answer hard questions. Top teams advance immediately.",
-      },
-      {
-        time: "22:45",
-        title: "Finalist pitches on main stage",
-        kind: "Finale",
-        detail: "Five minutes per team in front of the full judging panel.",
-      },
-      {
-        time: "23:30",
-        title: "Awards ceremony",
+        time: "07:00",
+        title: "Closing Ceremony & Prize Distribution",
         kind: "Ceremony",
-        detail: "₹10,000 / ₹6,000 / ₹4,000 across the podium — winners crowned the same night.",
+        detail: "Top teams pitch, winners crowned, and prizes awarded — ₹10,000 / ₹6,000 / ₹4,000.",
       },
     ],
   },
@@ -168,7 +136,7 @@ export function Schedule() {
               One weekend. <span className="text-gradient">Twelve relentless hours.</span>
             </>
           }
-          description="A format engineered for momentum: kickoff night to form your squad and scope the idea, then a single 12-hour sprint from first commit to final pitch."
+          description="An overnight sprint format: kickoff on Friday evening, build through the night with mentors available, and ship by 7 AM — closing ceremony and prizes on the same morning."
         />
 
         <Reveal delay={0.15}>

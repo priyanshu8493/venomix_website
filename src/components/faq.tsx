@@ -33,7 +33,7 @@ const faqs: Faq[] = [
     category: "Registration",
     question: "How do I register, and when do applications close?",
     answer:
-      "Use the registration form on this page. Applications are reviewed on a rolling basis and close September 5 or when we select all 15 finalist teams — whichever comes first. Each team has 3 members, so spots are limited. Early is the only safe bet.",
+      "Use the registration form on this page. Applications are reviewed on a rolling basis and close when we select all 15 finalist teams — whichever comes first. Each team has 3 members, so spots are limited. Early is the only safe bet.",
   },
   {
     category: "Registration",
